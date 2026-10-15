@@ -1,0 +1,194 @@
+/* ==========================================================================
+   PALETA E ESPAÇAMENTO OFICIAL - SEAGREEN & WHITESMOKE
+   Organização visual espaçada, arejada e sem elementos amontoados
+   ========================================================================== */
+
+.reveal {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: black;
+  background-color: white;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+/* ==========================================================================
+   CAPA (CENTRALIZADA E ESPAÇOSA)
+   ========================================================================== */
+.reveal #title-slide {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.reveal #title-slide .title {
+  color: seagreen !important;
+  font-weight: 800 !important;
+  font-size: 2.2em !important;
+  letter-spacing: 2px !important;
+  margin-bottom: 18px !important;
+  text-transform: uppercase !important;
+}
+
+.reveal #title-slide .subtitle {
+  color: black !important;
+  font-weight: 700 !important;
+  font-size: 1.15em !important;
+  letter-spacing: 1px !important;
+  margin-bottom: 28px !important;
+  text-transform: uppercase !important;
+}
+
+.reveal #title-slide .author {
+  color: black !important;
+  font-size: 0.95em !important;
+  margin-bottom: 6px !important;
+}
+
+.reveal #title-slide .institute {
+  color: black !important;
+  font-size: 0.85em !important;
+  margin-bottom: 18px !important;
+}
+
+.reveal #title-slide .date {
+  color: black !important;
+  font-size: 0.85em !important;
+}
+
+/* ==========================================================================
+   TÍTULOS E TRANSIÇÕES
+   ========================================================================== */
+.reveal h2 {
+  color: black !important;
+  font-size: 1.25em !important;
+  font-weight: 700 !important;
+  margin-top: 0 !important;
+  margin-bottom: 18px !important;
+  padding-bottom: 8px !important;
+  border-bottom: 3px solid seagreen !important;
+}
+
+.reveal h2.center {
+  text-align: center !important;
+  color: seagreen !important;
+  border-bottom: none !important;
+  margin-top: 15% !important;
+  font-size: 1.7em !important;
+  letter-spacing: 1px !important;
+}
+
+.reveal h3 {
+  color: black !important;
+  font-size: 1.05em !important;
+  font-weight: 700 !important;
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+}
+
+.reveal p {
+  margin: 6px 0 !important;
+  line-height: 1.4 !important;
+  color: black !important;
+}
+
+/* ==========================================================================
+   CARTÕES ESPAÇOSOS COM RESPIRO VERTICAL
+   ========================================================================== */
+.box-grey {
+  background-color: whitesmoke !important;
+  border-left: 6px solid seagreen !important;
+  padding: 14px 20px !important;
+  border-radius: 8px !important;
+  margin: 12px 0 !important;
+  color: black !important;
+}
+
+.box-greypeq {
+  font-size: 0.86em !important;
+  background-color: whitesmoke !important;
+  border-left: 6px solid seagreen !important;
+  padding: 12px 18px !important;
+  border-radius: 8px !important;
+  margin: 8px 0 !important;
+  color: black !important;
+}
+
+/* Espaçamento das Colunas */
+.reveal .columns {
+  margin-top: 10px !important;
+  align-items: stretch !important;
+}
+
+/* Listas com espaçamento confortável */
+.reveal ul {
+  margin-top: 6px !important;
+  margin-bottom: 8px !important;
+  padding-left: 20px !important;
+}
+
+.reveal li {
+  margin-bottom: 6px !important;
+  line-height: 1.35 !important;
+  color: black !important;
+}
+
+/* ==========================================================================
+   ABAS (PANEL-TABSET)
+   ========================================================================== */
+.panel-tabset .nav-tabs {
+  margin-bottom: 12px !important;
+  border-bottom: 1px solid silver !important;
+}
+
+.panel-tabset .nav-tabs .nav-link,
+.panel-tabset .nav-link,
+.panel-tabset a {
+  color: black !important;
+  font-size: 0.9em !important;
+  background-color: transparent !important;
+  border: 1px solid silver !important;
+  border-radius: 4px !important;
+  padding: 5px 12px !important;
+  margin-right: 6px !important;
+}
+
+.panel-tabset .nav-tabs .nav-link:hover,
+.panel-tabset .nav-link:hover {
+  color: seagreen !important;
+  border-color: seagreen !important;
+}
+
+.panel-tabset .nav-tabs .nav-link.active,
+.panel-tabset .nav-link.active,
+.panel-tabset a.active {
+  color: seagreen !important;
+  font-weight: bold !important;
+  border: 1px solid seagreen !important;
+  border-bottom: 3px solid seagreen !important;
+  background-color: whitesmoke !important;
+}
+
+/* ==========================================================================
+   TABELAS COMPACTAS E LEGÍVEIS
+   ========================================================================== */
+.reveal table {
+  width: 100% !important;
+  color: black !important;
+  font-size: 0.68em !important;
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+}
+
+.reveal table th {
+  border-bottom: 2px solid seagreen !important;
+  padding: 5px 8px !important;
+  font-weight: 700 !important;
+  color: black !important;
+}
+
+.reveal table td {
+  padding: 4px 8px !important;
+  border-bottom: 1px solid silver !important;
+  color: black !important;
+}

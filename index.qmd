@@ -1,0 +1,609 @@
+---
+title: "**PRÁTICA ESTATÍSTICA II**"
+subtitle: "**PROJETO I — Mudanças no consumo de embutidos durante a pandemia de COVID-19**"
+author: "Marcos Paulo Costa da Silva Dias"
+date: today
+date-format: "DD/MM/YYYY"
+institute: "Universidade Federal Fluminense"
+format:
+  revealjs:
+    smaller: true
+    css: custom.css
+    slide-number: true
+    incremental: false
+    transition: slide
+    background-transition: fade
+    width: 1280
+    height: 720
+    margin: 0.07
+    auto-stretch: false
+    include-in-header:
+      - text: |
+          <style>
+          .tabela-compacta table { font-size: 0.5em; }
+          .tabela-compacta th, .tabela-compacta td { padding: 2px 6px !important; line-height: 1.15; }
+          </style>
+execute:
+  echo: false
+  warning: false
+  message: false
+editor:
+  markdown:
+    wrap: 72
+---
+
+```{r}
+#| label: setup
+#| include: false
+#| message: false
+#| warning: false
+
+require(openxlsx)            # Leitura de dados
+require(dplyr)               # Manipulação de dados
+require(gtsummary)           # Tabelas bivariadas automáticas
+require(rstatix)             # Coeficiente V de Cramér e Games-Howell
+require(DescTools)           # Teste de Levene
+
+# 1. Leitura dos dados
+dados <- read.xlsx("Nutrição.xlsx")
+
+# 2. Formatação para o português
+theme_gtsummary_language("pt", big.mark = ".", decimal.mark = ",")
+
+# Reordena os níveis de Embutidos para a ordem padrão
+dados$Embutidos <- factor(dados$Embutidos, levels = c("Não alterou", "Aumentou", "Não consumo", "Diminuiu"))
+
+# 3. Preparação das variáveis qualitativas (recusas como NA)
+DadosQuali <- dados %>% 
+  select(
+    Genero, Raca_cor, Regiao, Isolamento, Trabalha, Escolaridade, Renda_familiar,
+    Covid, Consulta_Nutricionista, Dificuldade_Financeira, cigarro, Ansiedade,
+    Depressao, Insonia, Enxaqueca, Embutidos
+  ) %>%
+  mutate(
+    Genero = ifelse(Genero %in% c("Prefiro não responder", "."), NA, Genero),
+    Raca_cor = ifelse(Raca_cor %in% c("Prefiro não declarar", "."), NA, Raca_cor),
+    Escolaridade = ifelse(Escolaridade %in% c("Não desejo informar", "."), NA, Escolaridade)
+  )
+
+# 4. Função do Coeficiente V de Cramér
+cramer_fun <- function(data, variable, by, ...) {
+  tab <- table(data[[variable]], data[[by]])
+  v <- rstatix::cramer_v(tab)
+  tibble::tibble(`**Cramér**` = round(v, 3))
+}
+
+# Função auxiliar para gerar tabelas padronizadas idênticas à imagem
+gera_tabela_bloco <- function(data_subset, labels_list, fisher_vars = NULL) {
+  tbl <- tbl_summary(
+    data = data_subset,
+    by = Embutidos,
+    percent = "row",
+    missing = "no",
+    label = labels_list
+  )
+  
+  if (!is.null(fisher_vars)) {
+    tbl <- tbl %>% add_p(
+      test = list(all_of(fisher_vars) ~ "fisher.test", all_categorical() ~ "chisq.test"),
+      test.args = all_tests("fisher.test") ~ list(simulate.p.value = TRUE, B = 2000),
+      pvalue_fun = label_style_pvalue(digits = 3)
+    )
+  } else {
+    tbl <- tbl %>% add_p(
+      test = all_categorical() ~ "chisq.test",
+      pvalue_fun = label_style_pvalue(digits = 3)
+    )
+  }
+  
+  tbl %>%
+    bold_p(t = 0.05) %>%
+    add_stat(fns = everything() ~ cramer_fun) %>%
+    modify_spanning_header(all_stat_cols() ~ "**Mudança no consumo de embutidos**") %>%
+    modify_header(label ~ "**Variáveis**") %>%
+    bold_labels() %>%
+    modify_header(all_stat_cols() ~ "**{level}**<br>{n} ({style_percent(p)}%)") %>%
+    modify_footnote(everything() ~ NA)
+}
+
+# Tab 1: Demográficas
+tabela_demog <- gera_tabela_bloco(
+  DadosQuali %>% select(Embutidos, Genero, Raca_cor, Regiao),
+  list(
+    Genero   ~ "Gênero<sup>F</sup>",
+    Raca_cor ~ "Raça/cor<sup>F</sup>",
+    Regiao   ~ "Região<sup>Q</sup>"
+  ),
+  fisher_vars = c("Genero", "Raca_cor")
+) %>%
+  modify_bold(columns = stat_1, rows = (variable == "Genero" & label == "Feminino") | (variable == "Raca_cor" & label == "Branca") | (variable == "Regiao" & label == "Centro-oeste")) %>%
+  modify_bold(columns = stat_2, rows = (variable == "Raca_cor" & label %in% c("Branca", "Parda")) | (variable == "Regiao" & label %in% c("Nordeste", "Norte", "Sudeste"))) %>%
+  modify_bold(columns = stat_3, rows = (variable == "Genero" & label %in% c("Feminino", "Masculino")) | (variable == "Raca_cor" & label %in% c("Branca", "Parda", "Preta")) | (variable == "Regiao" & label == "Sul")) %>%
+  modify_bold(columns = stat_4, rows = (variable == "Raca_cor" & label %in% c("Branca", "Preta")))
+
+# Tab 2: Socioeconômicas
+tabela_socio <- gera_tabela_bloco(
+  DadosQuali %>% select(Embutidos, Escolaridade, Renda_familiar, Trabalha, Dificuldade_Financeira),
+  list(
+    Escolaridade           ~ "Escolaridade<sup>F</sup>",
+    Renda_familiar         ~ "Faixa de Renda Familiar<sup>Q</sup>",
+    Trabalha               ~ "Situação de Trabalho<sup>Q</sup>",
+    Dificuldade_Financeira ~ "Dificuldade Financeira<sup>Q</sup>"
+  ),
+  fisher_vars = c("Escolaridade")
+) %>%
+  modify_bold(columns = stat_1, rows = (variable == "Renda_familiar" & label %in% c("até R$ 1254,00", "mais de R$ 8.640")) | (variable == "Dificuldade_Financeira" & label %in% c("Não", "Sim")) | (variable == "Escolaridade" & label == "Pós-graduação")) %>%
+  modify_bold(columns = stat_2, rows = (variable == "Escolaridade" & label %in% c("Analfabeto", "Ensino Superior Completo")) | (variable == "Renda_familiar" & label == "até R$ 1254,00") | (variable == "Dificuldade_Financeira" & label %in% c("Não", "Sim"))) %>%
+  modify_bold(columns = stat_4, rows = (variable == "Escolaridade" & label %in% c("Ensino Médio Completo", "Pós-graduação")) | (variable == "Renda_familiar" & label %in% c("até R$ 1254,00", "mais de R$ 8.640")) | (variable == "Trabalha" & label %in% c("Não", "Sim")) | (variable == "Dificuldade_Financeira" & label %in% c("Não", "Sim")))
+
+# Tab 3: Pandemia e hábitos
+tabela_pandemia <- gera_tabela_bloco(
+  DadosQuali %>% select(Embutidos, Isolamento, Covid, Consulta_Nutricionista, cigarro),
+  list(
+    Isolamento             ~ "Isolamento Social<sup>Q</sup>",
+    Covid                  ~ "Diagnóstico de COVID-19<sup>Q</sup>",
+    Consulta_Nutricionista ~ "Consulta com Nutricionista<sup>Q</sup>",
+    cigarro                ~ "Hábito de Fumar<sup>Q</sup>"
+  )
+) %>%
+  modify_bold(columns = stat_1, rows = (variable == "Isolamento" & label %in% c("Não", "Sim")) | (variable == "Consulta_Nutricionista" & label %in% c("Não", "Sim"))) %>%
+  modify_bold(columns = stat_2, rows = (variable == "Consulta_Nutricionista" & label %in% c("Não", "Sim"))) %>%
+  modify_bold(columns = stat_3, rows = (variable == "Isolamento" & label %in% c("Não", "Sim")) | (variable == "Consulta_Nutricionista" & label %in% c("Não", "Sim"))) %>%
+  modify_bold(columns = stat_4, rows = (variable == "Consulta_Nutricionista" & label %in% c("Não", "Sim")) | (variable == "cigarro" & label %in% c("Não", "Sim")))
+
+# Tab 4: Saúde
+tabela_saude <- gera_tabela_bloco(
+  DadosQuali %>% select(Embutidos, Ansiedade, Depressao, Insonia, Enxaqueca),
+  list(
+    Ansiedade ~ "Relato de Ansiedade<sup>Q</sup>",
+    Depressao ~ "Relato de Depressão<sup>Q</sup>",
+    Insonia   ~ "Relato de Insônia<sup>Q</sup>",
+    Enxaqueca ~ "Relato de Enxaqueca<sup>Q</sup>"
+  )
+) %>%
+  modify_bold(columns = stat_1, rows = (variable == "Ansiedade" & label %in% c("Não", "Sim"))) %>%
+  modify_bold(columns = stat_2, rows = (variable == "Ansiedade" & label %in% c("Não", "Sim")) | (variable == "Insonia" & label %in% c("Não", "Sim")))
+
+# Tabela 2: Quantitativas
+tabela_quanti <- dados %>%
+  select(Embutidos, Idade, Peso, Altura, IMC) %>%
+  tbl_summary(
+    by = Embutidos,
+    statistic = all_continuous() ~ "{mean} ({sd})",
+    digits = all_continuous() ~ 2,
+    missing = "no",
+    label = list(
+      Idade  ~ "Idade (anos)",
+      Peso   ~ "Peso (kg)",
+      Altura ~ "Altura (m)",
+      IMC    ~ "IMC (kg/m²)"
+    )
+  ) %>%
+  add_p(test = all_continuous() ~ "oneway.test") %>%
+  bold_p(t = 0.05) %>%
+  modify_spanning_header(all_stat_cols() ~ "**Mudança no consumo de embutidos**") %>%
+  modify_header(label ~ "**Variáveis Quantitativas**") %>%
+  bold_labels()
+```
+
+---
+
+## 1. Introdução {.center}
+
+::: {.box-grey}
+**Contextualização, Relevância e Objetivos**
+:::
+
+---
+
+## Contextualização e Relevância
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.box-greypeq}
+**O Cenário da Pandemia**
+
+* **Impacto Social:** Isolamento social e restrições socioeconômicas em 2022.
+
+* **Rotina Alimentar:** Divisão entre a busca por praticidade e o cuidado com a saúde.
+
+* **Conveniência:** Aumento da demanda por alimentos de preparo rápido e longa durabilidade.
+:::
+:::
+
+::: {.column width="50%"}
+::: {.box-greypeq}
+**Por que estudar Embutidos?**
+
+* **Classificação:** Alimentos ultraprocessados (presunto, salsicha, linguiça, mortadela).
+
+* **Perfil Nutricional:** Alto teor de sódio, gorduras saturadas e nitritos.
+
+* **Risco Clínico:** Forte associação com hipertensão, obesidade e doenças cardiovasculares.
+:::
+:::
+:::
+
+---
+
+## Problema de Pesquisa e Objetivos
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.box-greypeq}
+**Problema de Pesquisa**  
+
+*"Quais fatores sociodemográficos, econômicos, emocionais e antropométricos estiveram associados às mudanças no consumo de embutidos durante a pandemia de COVID-19?"*
+:::
+:::
+
+::: {.column width="50%"}
+::: {.box-greypeq}
+**Objetivos do Estudo**
+
+* **Geral:** Investigar a associação entre a mudança de consumo de embutidos e o perfil da amostra.
+
+* **Específico 1:** Avaliar a intensidade da associação ($V$ de Cramér).
+
+* **Específico 2:** Identificar caselas influentes via resíduos padronizados ($|z| > 1{,}96$).
+
+* **Específico 3:** Comparar as medidas de IMC e peso entre os padrões de consumo.
+:::
+:::
+:::
+
+---
+
+## 2. Metodologia {.center}
+
+::: {.box-grey}
+**Delineamento Amostral e Procedimentos Estatísticos**
+:::
+
+---
+
+## Delineamento da Pesquisa e Dados
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.box-greypeq}
+**Origem dos Dados e Amostra**
+
+* **Delineamento:** Estudo transversal, observacional e quantitativo.
+
+* **Coleta:** Questionário online aplicado em 2022 por alunas de pós-graduação em Nutrição da UFF.
+
+* **Tamanho Amostral:** $N = 2.155$ indivíduos adultos residentes no Brasil.
+:::
+:::
+
+::: {.column width="50%"}
+::: {.box-greypeq}
+**Estrutura das Variáveis**
+
+* **Desfecho (Variável Resposta):** *`Embutidos`* (*Não alterou*, *Aumentou*, *Não consumo*, *Diminuiu*).
+
+* **Qualitativas:** Gênero, raça/cor, região, trabalho, escolaridade, renda, isolamento, COVID-19, finanças, nutricionista, fumo e saúde mental.
+
+* **Quantitativas:** Idade, Peso, Altura e IMC.
+:::
+:::
+:::
+
+---
+
+## Procedimentos Estatísticos e Tratamento
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.box-greypeq}
+**Tratamento e Testes Qualitativos**
+
+* **Tratamento de Dados:** Opções de recusa (*"Prefiro não responder"*) tratadas como *NA*.
+
+* **Testes de Associação:** Qui-Quadrado de Pearson ($^{Q}$) e Fisher com p-valor simulado ($^{F}$) para caselas pequenas ($n < 5$).
+
+* **Métricas:** Força de associação por $V$ de Cramér e caselas influentes por resíduos padronizados ($|z| > 1{,}96$).
+:::
+:::
+
+::: {.column width="50%"}
+::: {.box-greypeq}
+**Testes das Variáveis Quantitativas**
+
+* **Homogeneidade:** Teste de Levene *(DescTools)* para avaliar homocedasticidade.
+
+* **Comparação de Médias:** ANOVA de Welch *(oneway.test)* sob variâncias heterogêneas.
+
+* **Post-Hoc:** Teste de Games-Howell *(rstatix)* para comparações par a par.
+
+* **Software:** R / RStudio a nível de significância de 5% ($\alpha = 0{,}05$).
+:::
+:::
+:::
+
+---
+
+## 3. Resultados {.center}
+
+::: {.box-grey}
+**Tabelas de Associação, Resíduos Padronizados e Comparações Múltiplas**
+:::
+
+---
+
+## Perfil da Variável Resposta (Embutidos)
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.box-greypeq}
+**Distribuição do Consumo ($N = 2.155$)**
+
+* **Não alterou:** 39,5% ($n = 852$) — maior parcela manteve a rotina alimentar anterior.
+
+* **Aumentou:** 23,9% ($n = 516$) — quase 1 em cada 4 aumentou a ingestão.
+
+* **Não consumo:** 18,9% ($n = 407$) — indivíduos que já não comiam embutidos.
+
+* **Diminuiu:** 17,6% ($n = 380$) — redução do consumo durante o período.
+:::
+:::
+
+::: {.column width="50%"}
+::: {.box-greypeq}
+**Panorama Geral das Associações**
+
+* **Associações Significativas:** **13 de 15 variáveis** qualitativas apresentaram associação com a mudança de consumo ($p < 0{,}05$).
+
+* **Fatores Mais Fortes:** Dificuldade financeira ($V = 0{,}144$) e consulta com nutricionista ($V = 0{,}142$).
+
+* **Variáveis Independentes:** Apenas **COVID-19** ($p = 0{,}295$) e **Enxaqueca** ($p = 0{,}370$) não tiveram associação estatística.
+:::
+:::
+:::
+
+---
+
+## Tabela 1: Embutidos × variáveis categóricas
+
+::: {.panel-tabset}
+
+### Demográficas
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+tabela_demog
+```
+
+### Socioeconômicas
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+tabela_socio
+```
+
+### Pandemia e hábitos
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+tabela_pandemia
+```
+
+### Saúde
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+tabela_saude
+```
+
+:::
+
+::: {.box-greypeq}
+Valores: $n$ (% por linha). **Q:** qui-quadrado; **F:** Fisher (p-valor simulado). **Negrito:** $p < 0{,}05$ e casela influente ($|z| > 1{,}96$).  
+Categorias com poucas observações (ex.: Analfabeto, $n = 2$; Outro, $n = 6$) pedem cautela.
+:::
+
+---
+
+## Associações: Fatores Econômicos e Acompanhamento
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.box-greypeq}
+**Dificuldade Financeira ($V = 0{,}144; p < 0{,}001$)**
+
+* **Com dificuldade financeira:** Forte polarização alimentar — excesso em *Aumentou* (+4,00) e em *Diminuiu* (+4,03).
+
+* **Sem dificuldade financeira:** Maior estabilidade na dieta habitual (*Não alterou*, resíduo +5,22).
+:::
+:::
+
+::: {.column width="50%"}
+::: {.box-greypeq}
+**Consulta com Nutricionista ($V = 0{,}142; p < 0{,}001$)**
+
+* **Com nutricionista:** Forte fator protetivo — excesso em *Não consumo* (+4,91) e em *Diminuiu* (+2,89).
+
+* **Sem nutricionista:** Excesso significativo de aumento no consumo de embutidos (+4,21).
+:::
+:::
+:::
+
+---
+
+## Associações: Demografia e Saúde Mental
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.box-greypeq}
+**Gênero do Participante ($V = 0{,}108; p < 0{,}001$)**
+
+* **Mulheres:** Concentração expressiva na categoria de *Não consumo* (resíduo +5,00).
+
+* **Homens:** Déficit significativo de não consumidores (-5,00), com maior tendência de consumo contínuo.
+:::
+:::
+
+::: {.column width="50%"}
+::: {.box-greypeq}
+**Sintomas Emocionais ($p = 0{,}001$)**
+
+* **Ansiedade:** Participantes com relato de ansiedade apresentaram excesso em *Aumentou* (+3,29).
+
+* **Insônia:** O mesmo padrão de excesso de consumo foi observado em participantes com insônia (+3,26).
+:::
+:::
+:::
+
+---
+
+## Tabela 2: Variáveis Quantitativas
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+tabela_quanti
+```
+
+::: {.box-greypeq}
+* **Teste de Levene:** Rejeitou a igualdade de variâncias para todas as variáveis ($p < 0{,}001$), justificando o uso da **ANOVA de Welch**.
+
+* **Diferenças Significativas:** Houve diferença entre as médias de **IMC** ($p < 0{,}001$), **Peso** ($p < 0{,}001$) e **Idade** ($p = 0{,}001$).
+:::
+
+---
+
+## Comparações Múltiplas (Games-Howell)
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.box-greypeq}
+**Índice de Massa Corporal — IMC (kg/m²)**
+
+* **Aumentou:** Média de **26,72** (faixa de sobrepeso).
+
+* **Diminuiu:** Média de **25,69**.
+
+* **Não alterou:** Média de **25,49**.
+
+* **Não consumo:** Média de **24,11** (faixa de eutrofia).
+
+*Resultado:* Quem **aumentou** tem IMC significativamente maior que todos os outros grupos ($p < 0{,}01$). Quem **não consome** tem IMC significativamente menor que todos ($p < 0{,}001$).
+:::
+:::
+
+::: {.column width="50%"}
+::: {.box-greypeq}
+**Peso Corporal (kg)**
+
+* **Aumentou:** Média de **74,02 kg**.
+
+* **Diminuiu:** Média de **70,73 kg**.
+
+* **Não alterou:** Média de **70,24 kg**.
+
+* **Não consumo:** Média de **65,09 kg**.
+
+*Resultado:* Diferença de quase **9 kg** entre quem aumentou e quem não consome embutidos ($p < 0{,}001$).
+:::
+:::
+:::
+
+---
+
+## 4. Conclusão {.center}
+
+::: {.box-grey}
+**Síntese dos Achados, Implicações Práticas e Limitações**
+:::
+
+---
+
+## Síntese dos Achados
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.box-greypeq}
+**Fatores Protetivos**
+
+* **Acompanhamento com Nutricionista:** Forte associação com a diminuição ou com a não ingestão de embutidos.
+
+* **Estabilidade Financeira:** Preserva a rotina alimentar prévia sem migração para alimentos processados.
+
+* **Gênero Feminino:** Maior prevalência de indivíduos que não consomem embutidos.
+:::
+:::
+
+::: {.column width="50%"}
+::: {.box-greypeq}
+**Fatores de Risco**
+
+* **Impacto Econômico:** Famílias com dificuldade financeira aumentaram o consumo de ultraprocessados estocáveis.
+
+* **Transtornos Emocionais:** Ansiedade e insônia associaram-se ao aumento na ingestão de embutidos.
+
+* **Sobrepeso:** Indivíduos com maior IMC e peso corporal foram os que mais aumentaram o consumo.
+:::
+:::
+:::
+
+---
+
+## Implicações e Considerações Finais
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.box-greypeq}
+**Implicações Práticas**
+
+* Reforça a importância de políticas públicas voltadas à segurança alimentar e ao acesso a alimentos frescos em crises.
+
+* Destaca a necessidade de intervenções integradas entre nutrição e saúde mental no pós-pandemia.
+:::
+:::
+
+::: {.column width="50%"}
+::: {.box-greypeq}
+**Limitações do Estudo**
+
+* **Delineamento Transversal:** Não permite estabelecer relação causal estrita.
+
+* **Amostragem Online:** Maior proporção de mulheres e indivíduos com alta escolaridade em relação à população geral.
+:::
+:::
+:::
+
+---
+
+## Referências
+
+::: {.box-greypeq}
+* **Agresti, A.** (2013). *Categorical Data Analysis*. 3rd Edition. John Wiley & Sons.
+
+* **Brasil. Ministério da Saúde.** (2014). *Guia Alimentar para a População Brasileira*. 2ª edição.
+
+* **Games, P. A., & Howell, J. F.** (1976). *Pairwise Multiple Comparison Procedures with Unequal N's and/or Variances*. Journal of Educational Statistics.
+
+* **Welch, B. L.** (1951). *On the comparison of several mean values: an alternative approach*. Biometrika.
+
+* **Universidade Federal Fluminense (UFF).** *Material Didático de Prática Estatística II*.
+:::
+
+---
+
+## Obrigado! {.center}
+
+::: {.box-grey}
+**Dúvidas e Discussão**  
+Marcos Paulo Costa da Silva Dias  
+Universidade Federal Fluminense — UFF
+:::
