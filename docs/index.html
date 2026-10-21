@@ -9,7 +9,7 @@
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.38">
 
-  <meta name="author" content="Marcos Paulo Costa da Silva Dias">
+  <meta name="author" content="Marcos Paulo Costa da Silva Dias (mp_dias@id.uff.br)">
   <title>PRÁTICA ESTATÍSTICA II</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -125,23 +125,19 @@
       margin-right: 0; 
     }
   </style>
-  <style>
-  .tabela-compacta table { font-size: 0.5em; }
-  .tabela-compacta th, .tabela-compacta td { padding: 2px 6px !important; line-height: 1.15; }
-  </style>
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title"><strong>PRÁTICA ESTATÍSTICA II</strong></h1>
-  <p class="subtitle"><strong>PROJETO I — Mudanças no consumo de embutidos durante a pandemia de COVID-19</strong></p>
+  <h1 class="title">PRÁTICA ESTATÍSTICA II</h1>
+  <p class="subtitle">PROJETO I: CONSUMO DE EMBUTIDOS NA PANDEMIA</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Marcos Paulo Costa da Silva Dias 
+Marcos Paulo Costa da Silva Dias (mp_dias@id.uff.br) 
 </div>
         <p class="quarto-title-affiliation">
             Universidade Federal Fluminense
@@ -149,172 +145,125 @@ Marcos Paulo Costa da Silva Dias
     </div>
 </div>
 
-  <p class="date">15/10/2026</p>
+  <p class="date">20/10/2026</p>
 </section>
-<section id="introdução" class="slide level2 center">
-<h2>1. Introdução</h2>
-<div class="box-grey">
-<p><strong>Contextualização, Relevância e Objetivos</strong></p>
-</div>
-</section>
-<section id="contextualização-e-relevância" class="slide level2">
-<h2>Contextualização e Relevância</h2>
+<section id="introdução-contextualização-e-relevância" class="slide level2">
+<h2>1. Introdução: Contextualização e Relevância</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="box-greypeq">
-<p><strong>O Cenário da Pandemia</strong></p>
+<h3 id="o-cenário-da-pandemia">O Cenário da Pandemia</h3>
 <ul>
-<li><p><strong>Impacto Social:</strong> Isolamento social e restrições socioeconômicas em 2022.</p></li>
-<li><p><strong>Rotina Alimentar:</strong> Divisão entre a busca por praticidade e o cuidado com a saúde.</p></li>
-<li><p><strong>Conveniência:</strong> Aumento da demanda por alimentos de preparo rápido e longa durabilidade.</p></li>
+<li><p><strong>Rotina Alterada:</strong> A crise de 2022 desestruturou horários de refeição e o acesso regular a alimentos frescos.</p></li>
+<li><p><strong>Polarização Alimentar:</strong> População dividida entre a busca por praticidade imediata e a tentativa de proteger a saúde.</p></li>
+<li><p><strong>Impacto Econômico:</strong> Redução de renda familiar e inflação generalizada dos alimentos básicos em todo o país.</p></li>
 </ul>
-</div>
 </div><div class="column" style="width:50%;">
-<div class="box-greypeq">
-<p><strong>Por que estudar Embutidos?</strong></p>
+<h3 id="por-que-investigar-embutidos">Por que investigar Embutidos?</h3>
 <ul>
-<li><p><strong>Classificação:</strong> Alimentos ultraprocessados (presunto, salsicha, linguiça, mortadela).</p></li>
-<li><p><strong>Perfil Nutricional:</strong> Alto teor de sódio, gorduras saturadas e nitritos.</p></li>
-<li><p><strong>Risco Clínico:</strong> Forte associação com hipertensão, obesidade e doenças cardiovasculares.</p></li>
+<li><p><strong>Ultraprocessados:</strong> Presunto, mortadela, linguiça e salsicha possuem alta densidade calórica.</p></li>
+<li><p><strong>Carga Nutricional Nociva:</strong> Excesso de sódio, gorduras saturadas e conservantes artificiais (nitritos e nitratos).</p></li>
+<li><p><strong>Alerta Clínico:</strong> Consumo frequente diretamente ligado a hipertensão arterial, sobrepeso e aterosclerose.</p></li>
+<li><p><strong>Fator Praticidade:</strong> Alimentos baratos, de rápido preparo e longa durabilidade de prateleira (estocáveis).</p></li>
 </ul>
-</div>
 </div></div>
 </section>
 <section id="problema-de-pesquisa-e-objetivos" class="slide level2">
 <h2>Problema de Pesquisa e Objetivos</h2>
+<h3 id="problema-de-pesquisa">Problema de Pesquisa</h3>
+<blockquote>
+<p><em>“Quais fatores sociodemográficos, econômicos, emocionais e antropométricos estiveram associados às mudanças no consumo de embutidos durante a pandemia de COVID-19?”</em></p>
+</blockquote>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="box-greypeq">
-<p><strong>Problema de Pesquisa</strong></p>
-<p><em>“Quais fatores sociodemográficos, econômicos, emocionais e antropométricos estiveram associados às mudanças no consumo de embutidos durante a pandemia de COVID-19?”</em></p>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="box-greypeq">
-<p><strong>Objetivos do Estudo</strong></p>
+<h3 id="objetivo-geral">Objetivo Geral</h3>
 <ul>
-<li><p><strong>Geral:</strong> Investigar a associação entre a mudança de consumo de embutidos e o perfil da amostra.</p></li>
-<li><p><strong>Específico 1:</strong> Avaliar a intensidade da associação (<span class="math inline">\(V\)</span> de Cramér).</p></li>
-<li><p><strong>Específico 2:</strong> Identificar caselas influentes via resíduos padronizados (<span class="math inline">\(|z| &gt; 1{,}96\)</span>).</p></li>
-<li><p><strong>Específico 3:</strong> Comparar as medidas de IMC e peso entre os padrões de consumo.</p></li>
+<li>Investigar a associação entre a mudança de consumo de embutidos e o perfil completo da amostra brasileira.</li>
 </ul>
-</div>
+</div><div class="column" style="width:50%;">
+<h3 id="objetivos-específicos">Objetivos Específicos</h3>
+<ul>
+<li><p><strong>Intensidade:</strong> Avaliar a força das associações categóricas via coeficiente <span class="math inline">\(V\)</span> de Cramér.</p></li>
+<li><p><strong>Padrões de Consumo:</strong> Identificar caselas influentes via resíduos padronizados ajustados (<span class="math inline">\(|z| &gt; 1{,}96\)</span>).</p></li>
+<li><p><strong>Medidas Corporais:</strong> Comparar as médias de IMC e peso corporal entre os diferentes grupos de consumo.</p></li>
+</ul>
 </div></div>
 </section>
-<section id="metodologia" class="slide level2 center">
-<h2>2. Metodologia</h2>
-<div class="box-grey">
-<p><strong>Delineamento Amostral e Procedimentos Estatísticos</strong></p>
-</div>
-</section>
-<section id="delineamento-da-pesquisa-e-dados" class="slide level2">
-<h2>Delineamento da Pesquisa e Dados</h2>
+<section id="metodologia-amostra-e-variáveis" class="slide level2">
+<h2>2. Metodologia: Amostra e Variáveis</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="box-greypeq">
-<p><strong>Origem dos Dados e Amostra</strong></p>
+<h3 id="delineamento-da-pesquisa">Delineamento da Pesquisa</h3>
 <ul>
-<li><p><strong>Delineamento:</strong> Estudo transversal, observacional e quantitativo.</p></li>
-<li><p><strong>Coleta:</strong> Questionário online aplicado em 2022 por alunas de pós-graduação em Nutrição da UFF.</p></li>
-<li><p><strong>Tamanho Amostral:</strong> <span class="math inline">\(N = 2.155\)</span> indivíduos adultos residentes no Brasil.</p></li>
+<li><p><strong>Tipo de Estudo:</strong> Transversal, observacional e quantitativo.</p></li>
+<li><p><strong>Origem dos Dados:</strong> Questionário online aplicado pela pós-graduação em Nutrição da UFF (2022).</p></li>
+<li><p><strong>Amostra:</strong> <span class="math inline">\(N = 2.155\)</span> adultos residentes em diversas regiões do Brasil.</p></li>
 </ul>
-</div>
 </div><div class="column" style="width:50%;">
-<div class="box-greypeq">
-<p><strong>Estrutura das Variáveis</strong></p>
+<h3 id="variáveis-do-estudo">Variáveis do Estudo</h3>
 <ul>
-<li><p><strong>Desfecho (Variável Resposta):</strong> <em><code>Embutidos</code></em> (<em>Não alterou</em>, <em>Aumentou</em>, <em>Não consumo</em>, <em>Diminuiu</em>).</p></li>
-<li><p><strong>Qualitativas:</strong> Gênero, raça/cor, região, trabalho, escolaridade, renda, isolamento, COVID-19, finanças, nutricionista, fumo e saúde mental.</p></li>
-<li><p><strong>Quantitativas:</strong> Idade, Peso, Altura e IMC.</p></li>
+<li><p><strong>Variável Desfecho (Resposta):</strong><br>
+<strong>Embutidos</strong> (<em>Não alterou</em>, <em>Aumentou</em>, <em>Não consumo</em>, <em>Diminuiu</em>).</p></li>
+<li><p><strong>15 Variáveis Qualitativas:</strong><br>
+Gênero, raça/cor, região, trabalho, escolaridade, renda familiar, aperto financeiro, isolamento social, COVID-19, nutricionista, fumo, ansiedade, depressão, insônia e enxaqueca.</p></li>
+<li><p><strong>4 Variáveis Quantitativas:</strong><br>
+Idade (anos), Peso (kg), Altura (m) e IMC (kg/m²).</p></li>
 </ul>
-</div>
 </div></div>
 </section>
 <section id="procedimentos-estatísticos-e-tratamento" class="slide level2">
 <h2>Procedimentos Estatísticos e Tratamento</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="box-greypeq">
-<p><strong>Tratamento e Testes Qualitativos</strong></p>
+<h3 id="variáveis-qualitativas">Variáveis Qualitativas</h3>
 <ul>
-<li><p><strong>Tratamento de Dados:</strong> Opções de recusa (<em>“Prefiro não responder”</em>) tratadas como <em>NA</em>.</p></li>
-<li><p><strong>Testes de Associação:</strong> Qui-Quadrado de Pearson (<span class="math inline">\(^{Q}\)</span>) e Fisher com p-valor simulado (<span class="math inline">\(^{F}\)</span>) para caselas pequenas (<span class="math inline">\(n &lt; 5\)</span>).</p></li>
-<li><p><strong>Métricas:</strong> Força de associação por <span class="math inline">\(V\)</span> de Cramér e caselas influentes por resíduos padronizados (<span class="math inline">\(|z| &gt; 1{,}96\)</span>).</p></li>
+<li><p><strong>Tratamento de dados:</strong> Opções como <strong>“Prefiro não responder”</strong> e <strong>“Outros”</strong> foram agrupados para categorias com poucas observações.</p></li>
+<li><p><strong>Associação:</strong> Teste Qui-Quadrado de Pearson (<span class="math inline">\(^{Q}\)</span>) e Teste Exato de Fisher simulado (<span class="math inline">\(^{F}\)</span>, <span class="math inline">\(B = 2.000\)</span>) para caselas raras (regra de Cochran).</p></li>
+<li><p><strong>Métricas:</strong> Coeficiente <span class="math inline">\(V\)</span> de Cramér para intensidade e Resíduos padronizados ajustados (<span class="math inline">\(|z| &gt; 1{,}96\)</span>) para identificar caselas com excesso ou déficit.</p></li>
 </ul>
-</div>
 </div><div class="column" style="width:50%;">
-<div class="box-greypeq">
-<p><strong>Testes das Variáveis Quantitativas</strong></p>
+<h3 id="variáveis-quantitativas">Variáveis Quantitativas</h3>
 <ul>
-<li><p><strong>Homogeneidade:</strong> Teste de Levene <em>(DescTools)</em> para avaliar homocedasticidade.</p></li>
-<li><p><strong>Comparação de Médias:</strong> ANOVA de Welch <em>(oneway.test)</em> sob variâncias heterogêneas.</p></li>
-<li><p><strong>Post-Hoc:</strong> Teste de Games-Howell <em>(rstatix)</em> para comparações par a par.</p></li>
-<li><p><strong>Software:</strong> R / RStudio a nível de significância de 5% (<span class="math inline">\(\alpha = 0{,}05\)</span>).</p></li>
+<li><p><strong>Diagnóstico de Variâncias:</strong> Teste de Levene (<em>DescTools</em>) para avaliar a homocedasticidade.</p></li>
+<li><p><strong>Comparação de Médias:</strong> ANOVA de Welch para lidar com variâncias heterogêneas (<span class="math inline">\(p &lt; 0{,}001\)</span>).</p></li>
+<li><p><strong>Comparações Múltiplas:</strong> Pós-hoc de Games-Howell par a par para identificar quais grupos diferem entre si.</p></li>
 </ul>
-</div>
 </div></div>
-</section>
-<section id="resultados" class="slide level2 center">
-<h2>3. Resultados</h2>
-<div class="box-grey">
-<p><strong>Tabelas de Associação, Resíduos Padronizados e Comparações Múltiplas</strong></p>
+<div style="margin-top: 12px; font-size: 0.76em; color: var(--texto-suave); border-top: 1px solid var(--linha); padding-top: 6px;">
+<p><strong>Nível de significância:</strong> 5% &nbsp;|&nbsp; <strong>Pacotes do R:</strong> <code>readxl</code>, <code>dplyr</code>, <code>tidyr</code>, <code>ggplot2</code>, <code>gtsummary</code>, <code>gt</code>, <code>rstatix</code>, <code>DescTools</code></p>
 </div>
 </section>
-<section id="perfil-da-variável-resposta-embutidos" class="slide level2">
-<h2>Perfil da Variável Resposta (Embutidos)</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="box-greypeq">
-<p><strong>Distribuição do Consumo (<span class="math inline">\(N = 2.155\)</span>)</strong></p>
-<ul>
-<li><p><strong>Não alterou:</strong> 39,5% (<span class="math inline">\(n = 852\)</span>) — maior parcela manteve a rotina alimentar anterior.</p></li>
-<li><p><strong>Aumentou:</strong> 23,9% (<span class="math inline">\(n = 516\)</span>) — quase 1 em cada 4 aumentou a ingestão.</p></li>
-<li><p><strong>Não consumo:</strong> 18,9% (<span class="math inline">\(n = 407\)</span>) — indivíduos que já não comiam embutidos.</p></li>
-<li><p><strong>Diminuiu:</strong> 17,6% (<span class="math inline">\(n = 380\)</span>) — redução do consumo durante o período.</p></li>
-</ul>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="box-greypeq">
-<p><strong>Panorama Geral das Associações</strong></p>
-<ul>
-<li><p><strong>Associações Significativas:</strong> <strong>13 de 15 variáveis</strong> qualitativas apresentaram associação com a mudança de consumo (<span class="math inline">\(p &lt; 0{,}05\)</span>).</p></li>
-<li><p><strong>Fatores Mais Fortes:</strong> Dificuldade financeira (<span class="math inline">\(V = 0{,}144\)</span>) e consulta com nutricionista (<span class="math inline">\(V = 0{,}142\)</span>).</p></li>
-<li><p><strong>Variáveis Independentes:</strong> Apenas <strong>COVID-19</strong> (<span class="math inline">\(p = 0{,}295\)</span>) e <strong>Enxaqueca</strong> (<span class="math inline">\(p = 0{,}370\)</span>) não tiveram associação estatística.</p></li>
-</ul>
-</div>
-</div></div>
-</section>
-<section id="tabela-1-embutidos-variáveis-categóricas" class="slide level2">
-<h2>Tabela 1: Embutidos × variáveis categóricas</h2>
+<section id="resultados-tabela-1-embutidos-variáveis-categóricas" class="slide level2">
+<h2>3. Resultados: Tabela 1 (Embutidos × variáveis categóricas)</h2>
 <div class="panel-tabset">
 <ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Demográficas</a></li><li><a href="#tabset-1-2">Socioeconômicas</a></li><li><a href="#tabset-1-3">Pandemia e hábitos</a></li><li><a href="#tabset-1-4">Saúde</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
 <div class="cell">
 <div class="cell-output-display">
-<div id="gyptxvkrhr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#gyptxvkrhr table {
+<div id="dsnwkdfnin" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dsnwkdfnin table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#gyptxvkrhr thead, #gyptxvkrhr tbody, #gyptxvkrhr tfoot, #gyptxvkrhr tr, #gyptxvkrhr td, #gyptxvkrhr th {
+#dsnwkdfnin thead, #dsnwkdfnin tbody, #dsnwkdfnin tfoot, #dsnwkdfnin tr, #dsnwkdfnin td, #dsnwkdfnin th {
   border-style: none;
 }
 
-#gyptxvkrhr p {
+#dsnwkdfnin p {
   margin: 0;
   padding: 0;
 }
 
-#gyptxvkrhr .gt_table {
+#dsnwkdfnin .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
-  font-size: 16px;
+  font-size: 9.5px;
   font-weight: normal;
   font-style: normal;
   background-color: #FFFFFF;
@@ -333,12 +282,12 @@ Marcos Paulo Costa da Silva Dias
   border-left-color: #D3D3D3;
 }
 
-#gyptxvkrhr .gt_caption {
+#dsnwkdfnin .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#gyptxvkrhr .gt_title {
+#dsnwkdfnin .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -350,7 +299,7 @@ Marcos Paulo Costa da Silva Dias
   border-bottom-width: 0;
 }
 
-#gyptxvkrhr .gt_subtitle {
+#dsnwkdfnin .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -362,7 +311,7 @@ Marcos Paulo Costa da Silva Dias
   border-top-width: 0;
 }
 
-#gyptxvkrhr .gt_heading {
+#dsnwkdfnin .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -374,13 +323,13 @@ Marcos Paulo Costa da Silva Dias
   border-right-color: #D3D3D3;
 }
 
-#gyptxvkrhr .gt_bottom_border {
+#dsnwkdfnin .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gyptxvkrhr .gt_col_headings {
+#dsnwkdfnin .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -395,10 +344,10 @@ Marcos Paulo Costa da Silva Dias
   border-right-color: #D3D3D3;
 }
 
-#gyptxvkrhr .gt_col_heading {
+#dsnwkdfnin .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
-  font-size: 100%;
+  font-size: 10.5px;
   font-weight: normal;
   text-transform: inherit;
   border-left-style: none;
@@ -415,10 +364,10 @@ Marcos Paulo Costa da Silva Dias
   overflow-x: hidden;
 }
 
-#gyptxvkrhr .gt_column_spanner_outer {
+#dsnwkdfnin .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
-  font-size: 100%;
+  font-size: 10.5px;
   font-weight: normal;
   text-transform: inherit;
   padding-top: 0;
@@ -427,15 +376,15 @@ Marcos Paulo Costa da Silva Dias
   padding-right: 4px;
 }
 
-#gyptxvkrhr .gt_column_spanner_outer:first-child {
+#dsnwkdfnin .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gyptxvkrhr .gt_column_spanner_outer:last-child {
+#dsnwkdfnin .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gyptxvkrhr .gt_column_spanner {
+#dsnwkdfnin .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -447,11 +396,11 @@ Marcos Paulo Costa da Silva Dias
   width: 100%;
 }
 
-#gyptxvkrhr .gt_spanner_row {
+#dsnwkdfnin .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#gyptxvkrhr .gt_group_heading {
+#dsnwkdfnin .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -477,7 +426,7 @@ Marcos Paulo Costa da Silva Dias
   text-align: left;
 }
 
-#gyptxvkrhr .gt_empty_group_heading {
+#dsnwkdfnin .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -492,23 +441,23 @@ Marcos Paulo Costa da Silva Dias
   vertical-align: middle;
 }
 
-#gyptxvkrhr .gt_from_md > :first-child {
+#dsnwkdfnin .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gyptxvkrhr .gt_from_md > :last-child {
+#dsnwkdfnin .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gyptxvkrhr .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
+#dsnwkdfnin .gt_row {
+  padding-top: 1.2px;
+  padding-bottom: 1.2px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 10px;
   border-top-style: solid;
   border-top-width: 1px;
-  border-top-color: #D3D3D3;
+  border-top-color: #E0E7EE;
   border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
@@ -519,7 +468,7 @@ Marcos Paulo Costa da Silva Dias
   overflow-x: hidden;
 }
 
-#gyptxvkrhr .gt_stub {
+#dsnwkdfnin .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -532,7 +481,7 @@ Marcos Paulo Costa da Silva Dias
   padding-right: 5px;
 }
 
-#gyptxvkrhr .gt_stub_row_group {
+#dsnwkdfnin .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -546,15 +495,15 @@ Marcos Paulo Costa da Silva Dias
   vertical-align: top;
 }
 
-#gyptxvkrhr .gt_row_group_first td {
+#dsnwkdfnin .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#gyptxvkrhr .gt_row_group_first th {
+#dsnwkdfnin .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#gyptxvkrhr .gt_summary_row {
+#dsnwkdfnin .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -564,16 +513,16 @@ Marcos Paulo Costa da Silva Dias
   padding-right: 5px;
 }
 
-#gyptxvkrhr .gt_first_summary_row {
+#dsnwkdfnin .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#gyptxvkrhr .gt_first_summary_row.thick {
+#dsnwkdfnin .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#gyptxvkrhr .gt_last_summary_row {
+#dsnwkdfnin .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -583,7 +532,7 @@ Marcos Paulo Costa da Silva Dias
   border-bottom-color: #D3D3D3;
 }
 
-#gyptxvkrhr .gt_grand_summary_row {
+#dsnwkdfnin .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -593,7 +542,7 @@ Marcos Paulo Costa da Silva Dias
   padding-right: 5px;
 }
 
-#gyptxvkrhr .gt_first_grand_summary_row {
+#dsnwkdfnin .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -603,7 +552,7 @@ Marcos Paulo Costa da Silva Dias
   border-top-color: #D3D3D3;
 }
 
-#gyptxvkrhr .gt_last_grand_summary_row_top {
+#dsnwkdfnin .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -613,11 +562,11 @@ Marcos Paulo Costa da Silva Dias
   border-bottom-color: #D3D3D3;
 }
 
-#gyptxvkrhr .gt_striped {
+#dsnwkdfnin .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gyptxvkrhr .gt_table_body {
+#dsnwkdfnin .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -626,7 +575,7 @@ Marcos Paulo Costa da Silva Dias
   border-bottom-color: #D3D3D3;
 }
 
-#gyptxvkrhr .gt_footnotes {
+#dsnwkdfnin .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -640,7 +589,7 @@ Marcos Paulo Costa da Silva Dias
   border-right-color: #D3D3D3;
 }
 
-#gyptxvkrhr .gt_footnote {
+#dsnwkdfnin .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -649,7 +598,7 @@ Marcos Paulo Costa da Silva Dias
   padding-right: 5px;
 }
 
-#gyptxvkrhr .gt_sourcenotes {
+#dsnwkdfnin .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -663,102 +612,102 @@ Marcos Paulo Costa da Silva Dias
   border-right-color: #D3D3D3;
 }
 
-#gyptxvkrhr .gt_sourcenote {
-  font-size: 90%;
+#dsnwkdfnin .gt_sourcenote {
+  font-size: 9px;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
 
-#gyptxvkrhr .gt_left {
+#dsnwkdfnin .gt_left {
   text-align: left;
 }
 
-#gyptxvkrhr .gt_center {
+#dsnwkdfnin .gt_center {
   text-align: center;
 }
 
-#gyptxvkrhr .gt_right {
+#dsnwkdfnin .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gyptxvkrhr .gt_font_normal {
+#dsnwkdfnin .gt_font_normal {
   font-weight: normal;
 }
 
-#gyptxvkrhr .gt_font_bold {
+#dsnwkdfnin .gt_font_bold {
   font-weight: bold;
 }
 
-#gyptxvkrhr .gt_font_italic {
+#dsnwkdfnin .gt_font_italic {
   font-style: italic;
 }
 
-#gyptxvkrhr .gt_super {
+#dsnwkdfnin .gt_super {
   font-size: 65%;
 }
 
-#gyptxvkrhr .gt_footnote_marks {
+#dsnwkdfnin .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#gyptxvkrhr .gt_asterisk {
+#dsnwkdfnin .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#gyptxvkrhr .gt_indent_1 {
+#dsnwkdfnin .gt_indent_1 {
   text-indent: 5px;
 }
 
-#gyptxvkrhr .gt_indent_2 {
+#dsnwkdfnin .gt_indent_2 {
   text-indent: 10px;
 }
 
-#gyptxvkrhr .gt_indent_3 {
+#dsnwkdfnin .gt_indent_3 {
   text-indent: 15px;
 }
 
-#gyptxvkrhr .gt_indent_4 {
+#dsnwkdfnin .gt_indent_4 {
   text-indent: 20px;
 }
 
-#gyptxvkrhr .gt_indent_5 {
+#dsnwkdfnin .gt_indent_5 {
   text-indent: 25px;
 }
 
-#gyptxvkrhr .katex-display {
+#dsnwkdfnin .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#gyptxvkrhr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#dsnwkdfnin div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
 
-<table class="gt_table caption-top" style="width:100%;" data-quarto-bootstrap="false">
+<table class="gt_table caption-top" style="table-layout:fixed;width:100%;" data-quarto-bootstrap="false">
 <colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
+<col style="width: 28%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 9%">
+<col style="width: 11%">
 </colgroup>
 <thead>
 <tr class="gt_col_headings gt_spanner_row header">
-<th rowspan="2" id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Variáveis</strong></th>
+<th rowspan="2" id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Fatores</strong></th>
 <th colspan="4" id="level 1; stat_1" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
-<strong>Mudança no consumo de embutidos</strong>
+<strong>Mudança no consumo de embutidos na pandemia</strong>
 </div></th>
 <th rowspan="2" id="p.value" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Valor-p</strong></th>
-<th rowspan="2" id="a**Cramér**" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Cramér</strong></th>
+<th rowspan="2" id="Cramér" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Cramér</th>
 </tr>
 <tr class="gt_col_headings even">
 <th id="stat_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Não alterou</strong><br>852 (40%)</th>
@@ -769,7 +718,7 @@ Marcos Paulo Costa da Silva Dias
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_left" headers="label" style="font-weight: bold">Gênero&lt;sup&gt;F&lt;/sup&gt;</td>
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Gênero<sup>F</sup></td>
 <td class="gt_row gt_center" headers="stat_1"><br>
 </td>
 <td class="gt_row gt_center" headers="stat_2"><br>
@@ -778,44 +727,44 @@ Marcos Paulo Costa da Silva Dias
 </td>
 <td class="gt_row gt_center" headers="stat_4"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">&lt;0,001</td>
-<td class="gt_row gt_center" headers="**Cramér**">0,077</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold; background-color: #C8E6C9">&lt;0,001</td>
+<td class="gt_row gt_center" headers="Cramér">0,079</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Feminino</td>
-<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">613 (38%)</td>
+<td class="gt_row gt_center" headers="stat_1" style="background-color: #F8D7DA">613 (38%) ▼</td>
 <td class="gt_row gt_center" headers="stat_2">374 (23%)</td>
-<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">342 (21%)</td>
+<td class="gt_row gt_center" headers="stat_3" style="background-color: #D1E7DD">342 (21%) ▲</td>
 <td class="gt_row gt_center" headers="stat_4">273 (17%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Masculino</td>
 <td class="gt_row gt_center" headers="stat_1">233 (43%)</td>
 <td class="gt_row gt_center" headers="stat_2">141 (26%)</td>
-<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">63 (12%)</td>
+<td class="gt_row gt_center" headers="stat_3" style="background-color: #F8D7DA">63 (12%) ▼</td>
 <td class="gt_row gt_center" headers="stat_4">105 (19%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Outro</td>
-<td class="gt_row gt_center" headers="stat_1">3 (50%)</td>
-<td class="gt_row gt_center" headers="stat_2">1 (17%)</td>
-<td class="gt_row gt_center" headers="stat_3">1 (17%)</td>
-<td class="gt_row gt_center" headers="stat_4">1 (17%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Outro / NR</td>
+<td class="gt_row gt_center" headers="stat_1">6 (55%)</td>
+<td class="gt_row gt_center" headers="stat_2">1 (9,1%)</td>
+<td class="gt_row gt_center" headers="stat_3">2 (18%)</td>
+<td class="gt_row gt_center" headers="stat_4">2 (18%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label" style="font-weight: bold">Raça/cor&lt;sup&gt;F&lt;/sup&gt;</td>
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Raça/Cor<sup>F</sup></td>
 <td class="gt_row gt_center" headers="stat_1"><br>
 </td>
 <td class="gt_row gt_center" headers="stat_2"><br>
@@ -824,8 +773,8 @@ Marcos Paulo Costa da Silva Dias
 </td>
 <td class="gt_row gt_center" headers="stat_4"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">0,015</td>
-<td class="gt_row gt_center" headers="**Cramér**">0,068</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold; background-color: #C8E6C9">0,005</td>
+<td class="gt_row gt_center" headers="Cramér">0,068</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Amarela</td>
@@ -835,18 +784,18 @@ Marcos Paulo Costa da Silva Dias
 <td class="gt_row gt_center" headers="stat_4">6 (24%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Branca</td>
-<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">559 (42%)</td>
-<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">297 (22%)</td>
-<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">278 (21%)</td>
-<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">212 (16%)</td>
+<td class="gt_row gt_center" headers="stat_1" style="background-color: #D1E7DD">559 (42%) ▲</td>
+<td class="gt_row gt_center" headers="stat_2" style="background-color: #F8D7DA">297 (22%) ▼</td>
+<td class="gt_row gt_center" headers="stat_3" style="background-color: #D1E7DD">278 (21%) ▲</td>
+<td class="gt_row gt_center" headers="stat_4" style="background-color: #F8D7DA">212 (16%) ▼</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="even">
@@ -857,7 +806,7 @@ Marcos Paulo Costa da Silva Dias
 <td class="gt_row gt_center" headers="stat_4">1 (11%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="odd">
@@ -868,33 +817,33 @@ Marcos Paulo Costa da Silva Dias
 <td class="gt_row gt_center" headers="stat_4">0 (0%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Parda</td>
 <td class="gt_row gt_center" headers="stat_1">213 (37%)</td>
-<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">157 (27%)</td>
-<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">92 (16%)</td>
+<td class="gt_row gt_center" headers="stat_2" style="background-color: #D1E7DD">157 (27%) ▲</td>
+<td class="gt_row gt_center" headers="stat_3" style="background-color: #F8D7DA">92 (16%) ▼</td>
 <td class="gt_row gt_center" headers="stat_4">114 (20%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Preta</td>
 <td class="gt_row gt_center" headers="stat_1">60 (36%)</td>
 <td class="gt_row gt_center" headers="stat_2">45 (27%)</td>
-<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">21 (13%)</td>
-<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">40 (24%)</td>
+<td class="gt_row gt_center" headers="stat_3" style="background-color: #F8D7DA">21 (13%) ▼</td>
+<td class="gt_row gt_center" headers="stat_4" style="background-color: #D1E7DD">40 (24%) ▲</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label" style="font-weight: bold">Região&lt;sup&gt;Q&lt;/sup&gt;</td>
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Região<sup>Q</sup></td>
 <td class="gt_row gt_center" headers="stat_1"><br>
 </td>
 <td class="gt_row gt_center" headers="stat_2"><br>
@@ -903,65 +852,70 @@ Marcos Paulo Costa da Silva Dias
 </td>
 <td class="gt_row gt_center" headers="stat_4"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">0,002</td>
-<td class="gt_row gt_center" headers="**Cramér**">0,069</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold; background-color: #C8E6C9">0,002</td>
+<td class="gt_row gt_center" headers="Cramér">0,069</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Centro-oeste</td>
-<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">100 (46%)</td>
+<td class="gt_row gt_center" headers="stat_1" style="background-color: #D1E7DD">100 (46%) ▲</td>
 <td class="gt_row gt_center" headers="stat_2">49 (23%)</td>
 <td class="gt_row gt_center" headers="stat_3">37 (17%)</td>
 <td class="gt_row gt_center" headers="stat_4">31 (14%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Nordeste</td>
 <td class="gt_row gt_center" headers="stat_1">99 (37%)</td>
-<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">86 (32%)</td>
+<td class="gt_row gt_center" headers="stat_2" style="background-color: #D1E7DD">86 (32%) ▲</td>
 <td class="gt_row gt_center" headers="stat_3">39 (15%)</td>
 <td class="gt_row gt_center" headers="stat_4">44 (16%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Norte</td>
 <td class="gt_row gt_center" headers="stat_1">111 (36%)</td>
-<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">90 (30%)</td>
+<td class="gt_row gt_center" headers="stat_2" style="background-color: #D1E7DD">90 (30%) ▲</td>
 <td class="gt_row gt_center" headers="stat_3">49 (16%)</td>
 <td class="gt_row gt_center" headers="stat_4">55 (18%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Sudeste</td>
 <td class="gt_row gt_center" headers="stat_1">362 (40%)</td>
-<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">193 (21%)</td>
+<td class="gt_row gt_center" headers="stat_2" style="background-color: #F8D7DA">193 (21%) ▼</td>
 <td class="gt_row gt_center" headers="stat_3">178 (20%)</td>
 <td class="gt_row gt_center" headers="stat_4">174 (19%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Sul</td>
 <td class="gt_row gt_center" headers="stat_1">180 (39%)</td>
 <td class="gt_row gt_center" headers="stat_2">98 (21%)</td>
-<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">104 (23%)</td>
+<td class="gt_row gt_center" headers="stat_3" style="background-color: #D1E7DD">104 (23%) ▲</td>
 <td class="gt_row gt_center" headers="stat_4">76 (17%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
-</tbody>
+</tbody><tfoot>
+<tr class="gt_sourcenotes odd">
+<td colspan="7" class="gt_sourcenote"><strong>%</strong> por linha &nbsp;|&nbsp; <sup>Q</sup> qui-quadrado &nbsp; <sup>F</sup> exato de Fisher &nbsp;|&nbsp; <span style="background:#d1e7dd; color:#000; padding:1px 6px;">▲ acima do esperado</span> <span style="background:#f8d7da; color:#000; padding:1px 6px;">▼ abaixo do esperado</span> (|resíduo| &gt; 1,96, só em variáveis significativas) &nbsp;|&nbsp; <span style="background:#c8e6c9; color:#000; padding:1px 6px;">p &lt; 0,05</span></td>
+</tr>
+</tfoot>
+
 </table>
 
 </div>
@@ -971,30 +925,30 @@ Marcos Paulo Costa da Silva Dias
 <div id="tabset-1-2">
 <div class="cell">
 <div class="cell-output-display">
-<div id="qczczksyij" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#qczczksyij table {
+<div id="nwsmnlpkce" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#nwsmnlpkce table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qczczksyij thead, #qczczksyij tbody, #qczczksyij tfoot, #qczczksyij tr, #qczczksyij td, #qczczksyij th {
+#nwsmnlpkce thead, #nwsmnlpkce tbody, #nwsmnlpkce tfoot, #nwsmnlpkce tr, #nwsmnlpkce td, #nwsmnlpkce th {
   border-style: none;
 }
 
-#qczczksyij p {
+#nwsmnlpkce p {
   margin: 0;
   padding: 0;
 }
 
-#qczczksyij .gt_table {
+#nwsmnlpkce .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
-  font-size: 16px;
+  font-size: 9.5px;
   font-weight: normal;
   font-style: normal;
   background-color: #FFFFFF;
@@ -1013,12 +967,12 @@ Marcos Paulo Costa da Silva Dias
   border-left-color: #D3D3D3;
 }
 
-#qczczksyij .gt_caption {
+#nwsmnlpkce .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qczczksyij .gt_title {
+#nwsmnlpkce .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1030,7 +984,7 @@ Marcos Paulo Costa da Silva Dias
   border-bottom-width: 0;
 }
 
-#qczczksyij .gt_subtitle {
+#nwsmnlpkce .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1042,7 +996,7 @@ Marcos Paulo Costa da Silva Dias
   border-top-width: 0;
 }
 
-#qczczksyij .gt_heading {
+#nwsmnlpkce .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1054,13 +1008,13 @@ Marcos Paulo Costa da Silva Dias
   border-right-color: #D3D3D3;
 }
 
-#qczczksyij .gt_bottom_border {
+#nwsmnlpkce .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qczczksyij .gt_col_headings {
+#nwsmnlpkce .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1075,10 +1029,10 @@ Marcos Paulo Costa da Silva Dias
   border-right-color: #D3D3D3;
 }
 
-#qczczksyij .gt_col_heading {
+#nwsmnlpkce .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
-  font-size: 100%;
+  font-size: 10.5px;
   font-weight: normal;
   text-transform: inherit;
   border-left-style: none;
@@ -1095,10 +1049,10 @@ Marcos Paulo Costa da Silva Dias
   overflow-x: hidden;
 }
 
-#qczczksyij .gt_column_spanner_outer {
+#nwsmnlpkce .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
-  font-size: 100%;
+  font-size: 10.5px;
   font-weight: normal;
   text-transform: inherit;
   padding-top: 0;
@@ -1107,15 +1061,15 @@ Marcos Paulo Costa da Silva Dias
   padding-right: 4px;
 }
 
-#qczczksyij .gt_column_spanner_outer:first-child {
+#nwsmnlpkce .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qczczksyij .gt_column_spanner_outer:last-child {
+#nwsmnlpkce .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qczczksyij .gt_column_spanner {
+#nwsmnlpkce .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1127,11 +1081,11 @@ Marcos Paulo Costa da Silva Dias
   width: 100%;
 }
 
-#qczczksyij .gt_spanner_row {
+#nwsmnlpkce .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qczczksyij .gt_group_heading {
+#nwsmnlpkce .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1157,7 +1111,7 @@ Marcos Paulo Costa da Silva Dias
   text-align: left;
 }
 
-#qczczksyij .gt_empty_group_heading {
+#nwsmnlpkce .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1172,23 +1126,23 @@ Marcos Paulo Costa da Silva Dias
   vertical-align: middle;
 }
 
-#qczczksyij .gt_from_md > :first-child {
+#nwsmnlpkce .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qczczksyij .gt_from_md > :last-child {
+#nwsmnlpkce .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qczczksyij .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
+#nwsmnlpkce .gt_row {
+  padding-top: 1.2px;
+  padding-bottom: 1.2px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 10px;
   border-top-style: solid;
   border-top-width: 1px;
-  border-top-color: #D3D3D3;
+  border-top-color: #E0E7EE;
   border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
@@ -1199,7 +1153,7 @@ Marcos Paulo Costa da Silva Dias
   overflow-x: hidden;
 }
 
-#qczczksyij .gt_stub {
+#nwsmnlpkce .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1212,7 +1166,7 @@ Marcos Paulo Costa da Silva Dias
   padding-right: 5px;
 }
 
-#qczczksyij .gt_stub_row_group {
+#nwsmnlpkce .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1226,15 +1180,15 @@ Marcos Paulo Costa da Silva Dias
   vertical-align: top;
 }
 
-#qczczksyij .gt_row_group_first td {
+#nwsmnlpkce .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qczczksyij .gt_row_group_first th {
+#nwsmnlpkce .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qczczksyij .gt_summary_row {
+#nwsmnlpkce .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1244,16 +1198,16 @@ Marcos Paulo Costa da Silva Dias
   padding-right: 5px;
 }
 
-#qczczksyij .gt_first_summary_row {
+#nwsmnlpkce .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qczczksyij .gt_first_summary_row.thick {
+#nwsmnlpkce .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qczczksyij .gt_last_summary_row {
+#nwsmnlpkce .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1263,7 +1217,7 @@ Marcos Paulo Costa da Silva Dias
   border-bottom-color: #D3D3D3;
 }
 
-#qczczksyij .gt_grand_summary_row {
+#nwsmnlpkce .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1273,7 +1227,7 @@ Marcos Paulo Costa da Silva Dias
   padding-right: 5px;
 }
 
-#qczczksyij .gt_first_grand_summary_row {
+#nwsmnlpkce .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1283,7 +1237,7 @@ Marcos Paulo Costa da Silva Dias
   border-top-color: #D3D3D3;
 }
 
-#qczczksyij .gt_last_grand_summary_row_top {
+#nwsmnlpkce .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1293,11 +1247,11 @@ Marcos Paulo Costa da Silva Dias
   border-bottom-color: #D3D3D3;
 }
 
-#qczczksyij .gt_striped {
+#nwsmnlpkce .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qczczksyij .gt_table_body {
+#nwsmnlpkce .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1306,7 +1260,7 @@ Marcos Paulo Costa da Silva Dias
   border-bottom-color: #D3D3D3;
 }
 
-#qczczksyij .gt_footnotes {
+#nwsmnlpkce .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1320,7 +1274,7 @@ Marcos Paulo Costa da Silva Dias
   border-right-color: #D3D3D3;
 }
 
-#qczczksyij .gt_footnote {
+#nwsmnlpkce .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1329,7 +1283,7 @@ Marcos Paulo Costa da Silva Dias
   padding-right: 5px;
 }
 
-#qczczksyij .gt_sourcenotes {
+#nwsmnlpkce .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1343,102 +1297,102 @@ Marcos Paulo Costa da Silva Dias
   border-right-color: #D3D3D3;
 }
 
-#qczczksyij .gt_sourcenote {
-  font-size: 90%;
+#nwsmnlpkce .gt_sourcenote {
+  font-size: 9px;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
 
-#qczczksyij .gt_left {
+#nwsmnlpkce .gt_left {
   text-align: left;
 }
 
-#qczczksyij .gt_center {
+#nwsmnlpkce .gt_center {
   text-align: center;
 }
 
-#qczczksyij .gt_right {
+#nwsmnlpkce .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qczczksyij .gt_font_normal {
+#nwsmnlpkce .gt_font_normal {
   font-weight: normal;
 }
 
-#qczczksyij .gt_font_bold {
+#nwsmnlpkce .gt_font_bold {
   font-weight: bold;
 }
 
-#qczczksyij .gt_font_italic {
+#nwsmnlpkce .gt_font_italic {
   font-style: italic;
 }
 
-#qczczksyij .gt_super {
+#nwsmnlpkce .gt_super {
   font-size: 65%;
 }
 
-#qczczksyij .gt_footnote_marks {
+#nwsmnlpkce .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qczczksyij .gt_asterisk {
+#nwsmnlpkce .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qczczksyij .gt_indent_1 {
+#nwsmnlpkce .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qczczksyij .gt_indent_2 {
+#nwsmnlpkce .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qczczksyij .gt_indent_3 {
+#nwsmnlpkce .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qczczksyij .gt_indent_4 {
+#nwsmnlpkce .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qczczksyij .gt_indent_5 {
+#nwsmnlpkce .gt_indent_5 {
   text-indent: 25px;
 }
 
-#qczczksyij .katex-display {
+#nwsmnlpkce .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#qczczksyij div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#nwsmnlpkce div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
 
-<table class="gt_table caption-top" style="width:100%;" data-quarto-bootstrap="false">
+<table class="gt_table caption-top" style="table-layout:fixed;width:100%;" data-quarto-bootstrap="false">
 <colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
+<col style="width: 28%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 9%">
+<col style="width: 11%">
 </colgroup>
 <thead>
 <tr class="gt_col_headings gt_spanner_row header">
-<th rowspan="2" id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Variáveis</strong></th>
+<th rowspan="2" id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Fatores</strong></th>
 <th colspan="4" id="level 1; stat_1" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
-<strong>Mudança no consumo de embutidos</strong>
+<strong>Mudança no consumo de embutidos na pandemia</strong>
 </div></th>
 <th rowspan="2" id="p.value" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Valor-p</strong></th>
-<th rowspan="2" id="a**Cramér**" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Cramér</strong></th>
+<th rowspan="2" id="Cramér" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Cramér</th>
 </tr>
 <tr class="gt_col_headings even">
 <th id="stat_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Não alterou</strong><br>852 (40%)</th>
@@ -1449,7 +1403,7 @@ Marcos Paulo Costa da Silva Dias
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_left" headers="label" style="font-weight: bold">Escolaridade&lt;sup&gt;F&lt;/sup&gt;</td>
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Escolaridade<sup>Q</sup></td>
 <td class="gt_row gt_center" headers="stat_1"><br>
 </td>
 <td class="gt_row gt_center" headers="stat_2"><br>
@@ -1458,66 +1412,44 @@ Marcos Paulo Costa da Silva Dias
 </td>
 <td class="gt_row gt_center" headers="stat_4"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">0,008</td>
-<td class="gt_row gt_center" headers="**Cramér**">0,065</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold; background-color: #C8E6C9">0,008</td>
+<td class="gt_row gt_center" headers="Cramér">0,064</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Analfabeto</td>
-<td class="gt_row gt_center" headers="stat_1">0 (0%)</td>
-<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">2 (100%)</td>
-<td class="gt_row gt_center" headers="stat_3">0 (0%)</td>
-<td class="gt_row gt_center" headers="stat_4">0 (0%)</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Ensino Fundamental Completo</td>
-<td class="gt_row gt_center" headers="stat_1">3 (75%)</td>
-<td class="gt_row gt_center" headers="stat_2">0 (0%)</td>
-<td class="gt_row gt_center" headers="stat_3">0 (0%)</td>
-<td class="gt_row gt_center" headers="stat_4">1 (25%)</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
-</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Ensino Médio Completo</td>
-<td class="gt_row gt_center" headers="stat_1">285 (38%)</td>
-<td class="gt_row gt_center" headers="stat_2">163 (22%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Até Médio</td>
+<td class="gt_row gt_center" headers="stat_1">288 (39%)</td>
+<td class="gt_row gt_center" headers="stat_2">165 (22%)</td>
 <td class="gt_row gt_center" headers="stat_3">144 (19%)</td>
-<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">150 (20%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="background-color: #D1E7DD">151 (20%) ▲</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Ensino Superior Completo</td>
 <td class="gt_row gt_center" headers="stat_1">149 (36%)</td>
-<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">122 (29%)</td>
+<td class="gt_row gt_center" headers="stat_2" style="background-color: #D1E7DD">122 (29%) ▲</td>
 <td class="gt_row gt_center" headers="stat_3">69 (17%)</td>
 <td class="gt_row gt_center" headers="stat_4">76 (18%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Pós-graduação</td>
-<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">408 (42%)</td>
+<td class="gt_row gt_center" headers="stat_1" style="background-color: #D1E7DD">408 (42%) ▲</td>
 <td class="gt_row gt_center" headers="stat_2">223 (23%)</td>
 <td class="gt_row gt_center" headers="stat_3">194 (20%)</td>
-<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">149 (15%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="background-color: #F8D7DA">149 (15%) ▼</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label" style="font-weight: bold">Faixa de Renda Familiar&lt;sup&gt;Q&lt;/sup&gt;</td>
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Renda familiar<sup>Q</sup></td>
 <td class="gt_row gt_center" headers="stat_1"><br>
 </td>
 <td class="gt_row gt_center" headers="stat_2"><br>
@@ -1526,18 +1458,18 @@ Marcos Paulo Costa da Silva Dias
 </td>
 <td class="gt_row gt_center" headers="stat_4"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">&lt;0,001</td>
-<td class="gt_row gt_center" headers="**Cramér**">0,084</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold; background-color: #C8E6C9">&lt;0,001</td>
+<td class="gt_row gt_center" headers="Cramér">0,084</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;até R$ 1254,00</td>
-<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">74 (30%)</td>
-<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">74 (30%)</td>
+<td class="gt_row gt_center" headers="stat_1" style="background-color: #F8D7DA">74 (30%) ▼</td>
+<td class="gt_row gt_center" headers="stat_2" style="background-color: #D1E7DD">74 (30%) ▲</td>
 <td class="gt_row gt_center" headers="stat_3">37 (15%)</td>
-<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">60 (24%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="background-color: #D1E7DD">60 (24%) ▲</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="odd">
@@ -1548,22 +1480,22 @@ Marcos Paulo Costa da Silva Dias
 <td class="gt_row gt_center" headers="stat_4">228 (19%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;mais de R$ 8.640</td>
-<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">300 (44%)</td>
+<td class="gt_row gt_center" headers="stat_1" style="background-color: #D1E7DD">300 (44%) ▲</td>
 <td class="gt_row gt_center" headers="stat_2">149 (22%)</td>
 <td class="gt_row gt_center" headers="stat_3">139 (20%)</td>
-<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">92 (14%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="background-color: #F8D7DA">92 (14%) ▼</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label" style="font-weight: bold">Situação de Trabalho&lt;sup&gt;Q&lt;/sup&gt;</td>
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Trabalha<sup>Q</sup></td>
 <td class="gt_row gt_center" headers="stat_1"><br>
 </td>
 <td class="gt_row gt_center" headers="stat_2"><br>
@@ -1572,18 +1504,18 @@ Marcos Paulo Costa da Silva Dias
 </td>
 <td class="gt_row gt_center" headers="stat_4"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">0,023</td>
-<td class="gt_row gt_center" headers="**Cramér**">0,066</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold; background-color: #C8E6C9">0,023</td>
+<td class="gt_row gt_center" headers="Cramér">0,066</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não</td>
 <td class="gt_row gt_center" headers="stat_1">207 (36%)</td>
 <td class="gt_row gt_center" headers="stat_2">126 (22%)</td>
 <td class="gt_row gt_center" headers="stat_3">121 (21%)</td>
-<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">118 (21%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="background-color: #D1E7DD">118 (21%) ▲</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="odd">
@@ -1591,14 +1523,14 @@ Marcos Paulo Costa da Silva Dias
 <td class="gt_row gt_center" headers="stat_1">645 (41%)</td>
 <td class="gt_row gt_center" headers="stat_2">390 (25%)</td>
 <td class="gt_row gt_center" headers="stat_3">286 (18%)</td>
-<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">262 (17%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="background-color: #F8D7DA">262 (17%) ▼</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label" style="font-weight: bold">Dificuldade Financeira&lt;sup&gt;Q&lt;/sup&gt;</td>
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Dificuldade financeira<sup>Q</sup></td>
 <td class="gt_row gt_center" headers="stat_1"><br>
 </td>
 <td class="gt_row gt_center" headers="stat_2"><br>
@@ -1607,32 +1539,37 @@ Marcos Paulo Costa da Silva Dias
 </td>
 <td class="gt_row gt_center" headers="stat_4"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">&lt;0,001</td>
-<td class="gt_row gt_center" headers="**Cramér**">0,144</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold; background-color: #C8E6C9">&lt;0,001</td>
+<td class="gt_row gt_center" headers="Cramér">0,144</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não</td>
-<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">742 (42%)</td>
-<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">391 (22%)</td>
+<td class="gt_row gt_center" headers="stat_1" style="background-color: #D1E7DD">742 (42%) ▲</td>
+<td class="gt_row gt_center" headers="stat_2" style="background-color: #F8D7DA">391 (22%) ▼</td>
 <td class="gt_row gt_center" headers="stat_3">345 (20%)</td>
-<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">283 (16%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="background-color: #F8D7DA">283 (16%) ▼</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Sim</td>
-<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">110 (28%)</td>
-<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">125 (32%)</td>
+<td class="gt_row gt_center" headers="stat_1" style="background-color: #F8D7DA">110 (28%) ▼</td>
+<td class="gt_row gt_center" headers="stat_2" style="background-color: #D1E7DD">125 (32%) ▲</td>
 <td class="gt_row gt_center" headers="stat_3">62 (16%)</td>
-<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">97 (25%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="background-color: #D1E7DD">97 (25%) ▲</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
-</tbody>
+</tbody><tfoot>
+<tr class="gt_sourcenotes odd">
+<td colspan="7" class="gt_sourcenote"><strong>%</strong> por linha &nbsp;|&nbsp; <sup>Q</sup> qui-quadrado &nbsp; <sup>F</sup> exato de Fisher &nbsp;|&nbsp; <span style="background:#d1e7dd; color:#000; padding:1px 6px;">▲ acima do esperado</span> <span style="background:#f8d7da; color:#000; padding:1px 6px;">▼ abaixo do esperado</span> (|resíduo| &gt; 1,96, só em variáveis significativas) &nbsp;|&nbsp; <span style="background:#c8e6c9; color:#000; padding:1px 6px;">p &lt; 0,05</span></td>
+</tr>
+</tfoot>
+
 </table>
 
 </div>
@@ -1642,30 +1579,30 @@ Marcos Paulo Costa da Silva Dias
 <div id="tabset-1-3">
 <div class="cell">
 <div class="cell-output-display">
-<div id="ejejqaadjo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ejejqaadjo table {
+<div id="ejhyrizkqq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ejhyrizkqq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ejejqaadjo thead, #ejejqaadjo tbody, #ejejqaadjo tfoot, #ejejqaadjo tr, #ejejqaadjo td, #ejejqaadjo th {
+#ejhyrizkqq thead, #ejhyrizkqq tbody, #ejhyrizkqq tfoot, #ejhyrizkqq tr, #ejhyrizkqq td, #ejhyrizkqq th {
   border-style: none;
 }
 
-#ejejqaadjo p {
+#ejhyrizkqq p {
   margin: 0;
   padding: 0;
 }
 
-#ejejqaadjo .gt_table {
+#ejhyrizkqq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
-  font-size: 16px;
+  font-size: 9.5px;
   font-weight: normal;
   font-style: normal;
   background-color: #FFFFFF;
@@ -1684,12 +1621,12 @@ Marcos Paulo Costa da Silva Dias
   border-left-color: #D3D3D3;
 }
 
-#ejejqaadjo .gt_caption {
+#ejhyrizkqq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ejejqaadjo .gt_title {
+#ejhyrizkqq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1701,7 +1638,7 @@ Marcos Paulo Costa da Silva Dias
   border-bottom-width: 0;
 }
 
-#ejejqaadjo .gt_subtitle {
+#ejhyrizkqq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1713,7 +1650,7 @@ Marcos Paulo Costa da Silva Dias
   border-top-width: 0;
 }
 
-#ejejqaadjo .gt_heading {
+#ejhyrizkqq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1725,13 +1662,13 @@ Marcos Paulo Costa da Silva Dias
   border-right-color: #D3D3D3;
 }
 
-#ejejqaadjo .gt_bottom_border {
+#ejhyrizkqq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ejejqaadjo .gt_col_headings {
+#ejhyrizkqq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1746,10 +1683,10 @@ Marcos Paulo Costa da Silva Dias
   border-right-color: #D3D3D3;
 }
 
-#ejejqaadjo .gt_col_heading {
+#ejhyrizkqq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
-  font-size: 100%;
+  font-size: 10.5px;
   font-weight: normal;
   text-transform: inherit;
   border-left-style: none;
@@ -1766,10 +1703,10 @@ Marcos Paulo Costa da Silva Dias
   overflow-x: hidden;
 }
 
-#ejejqaadjo .gt_column_spanner_outer {
+#ejhyrizkqq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
-  font-size: 100%;
+  font-size: 10.5px;
   font-weight: normal;
   text-transform: inherit;
   padding-top: 0;
@@ -1778,15 +1715,15 @@ Marcos Paulo Costa da Silva Dias
   padding-right: 4px;
 }
 
-#ejejqaadjo .gt_column_spanner_outer:first-child {
+#ejhyrizkqq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ejejqaadjo .gt_column_spanner_outer:last-child {
+#ejhyrizkqq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ejejqaadjo .gt_column_spanner {
+#ejhyrizkqq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1798,11 +1735,11 @@ Marcos Paulo Costa da Silva Dias
   width: 100%;
 }
 
-#ejejqaadjo .gt_spanner_row {
+#ejhyrizkqq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ejejqaadjo .gt_group_heading {
+#ejhyrizkqq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1828,7 +1765,7 @@ Marcos Paulo Costa da Silva Dias
   text-align: left;
 }
 
-#ejejqaadjo .gt_empty_group_heading {
+#ejhyrizkqq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1843,23 +1780,23 @@ Marcos Paulo Costa da Silva Dias
   vertical-align: middle;
 }
 
-#ejejqaadjo .gt_from_md > :first-child {
+#ejhyrizkqq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ejejqaadjo .gt_from_md > :last-child {
+#ejhyrizkqq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ejejqaadjo .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
+#ejhyrizkqq .gt_row {
+  padding-top: 1.2px;
+  padding-bottom: 1.2px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 10px;
   border-top-style: solid;
   border-top-width: 1px;
-  border-top-color: #D3D3D3;
+  border-top-color: #E0E7EE;
   border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
@@ -1870,7 +1807,7 @@ Marcos Paulo Costa da Silva Dias
   overflow-x: hidden;
 }
 
-#ejejqaadjo .gt_stub {
+#ejhyrizkqq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1883,7 +1820,7 @@ Marcos Paulo Costa da Silva Dias
   padding-right: 5px;
 }
 
-#ejejqaadjo .gt_stub_row_group {
+#ejhyrizkqq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1897,15 +1834,15 @@ Marcos Paulo Costa da Silva Dias
   vertical-align: top;
 }
 
-#ejejqaadjo .gt_row_group_first td {
+#ejhyrizkqq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ejejqaadjo .gt_row_group_first th {
+#ejhyrizkqq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ejejqaadjo .gt_summary_row {
+#ejhyrizkqq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1915,16 +1852,16 @@ Marcos Paulo Costa da Silva Dias
   padding-right: 5px;
 }
 
-#ejejqaadjo .gt_first_summary_row {
+#ejhyrizkqq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ejejqaadjo .gt_first_summary_row.thick {
+#ejhyrizkqq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ejejqaadjo .gt_last_summary_row {
+#ejhyrizkqq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1934,7 +1871,7 @@ Marcos Paulo Costa da Silva Dias
   border-bottom-color: #D3D3D3;
 }
 
-#ejejqaadjo .gt_grand_summary_row {
+#ejhyrizkqq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1944,7 +1881,7 @@ Marcos Paulo Costa da Silva Dias
   padding-right: 5px;
 }
 
-#ejejqaadjo .gt_first_grand_summary_row {
+#ejhyrizkqq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1954,7 +1891,7 @@ Marcos Paulo Costa da Silva Dias
   border-top-color: #D3D3D3;
 }
 
-#ejejqaadjo .gt_last_grand_summary_row_top {
+#ejhyrizkqq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1964,11 +1901,11 @@ Marcos Paulo Costa da Silva Dias
   border-bottom-color: #D3D3D3;
 }
 
-#ejejqaadjo .gt_striped {
+#ejhyrizkqq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ejejqaadjo .gt_table_body {
+#ejhyrizkqq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1977,7 +1914,7 @@ Marcos Paulo Costa da Silva Dias
   border-bottom-color: #D3D3D3;
 }
 
-#ejejqaadjo .gt_footnotes {
+#ejhyrizkqq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1991,7 +1928,7 @@ Marcos Paulo Costa da Silva Dias
   border-right-color: #D3D3D3;
 }
 
-#ejejqaadjo .gt_footnote {
+#ejhyrizkqq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2000,7 +1937,7 @@ Marcos Paulo Costa da Silva Dias
   padding-right: 5px;
 }
 
-#ejejqaadjo .gt_sourcenotes {
+#ejhyrizkqq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2014,102 +1951,102 @@ Marcos Paulo Costa da Silva Dias
   border-right-color: #D3D3D3;
 }
 
-#ejejqaadjo .gt_sourcenote {
-  font-size: 90%;
+#ejhyrizkqq .gt_sourcenote {
+  font-size: 9px;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
 
-#ejejqaadjo .gt_left {
+#ejhyrizkqq .gt_left {
   text-align: left;
 }
 
-#ejejqaadjo .gt_center {
+#ejhyrizkqq .gt_center {
   text-align: center;
 }
 
-#ejejqaadjo .gt_right {
+#ejhyrizkqq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ejejqaadjo .gt_font_normal {
+#ejhyrizkqq .gt_font_normal {
   font-weight: normal;
 }
 
-#ejejqaadjo .gt_font_bold {
+#ejhyrizkqq .gt_font_bold {
   font-weight: bold;
 }
 
-#ejejqaadjo .gt_font_italic {
+#ejhyrizkqq .gt_font_italic {
   font-style: italic;
 }
 
-#ejejqaadjo .gt_super {
+#ejhyrizkqq .gt_super {
   font-size: 65%;
 }
 
-#ejejqaadjo .gt_footnote_marks {
+#ejhyrizkqq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ejejqaadjo .gt_asterisk {
+#ejhyrizkqq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ejejqaadjo .gt_indent_1 {
+#ejhyrizkqq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ejejqaadjo .gt_indent_2 {
+#ejhyrizkqq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ejejqaadjo .gt_indent_3 {
+#ejhyrizkqq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ejejqaadjo .gt_indent_4 {
+#ejhyrizkqq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ejejqaadjo .gt_indent_5 {
+#ejhyrizkqq .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ejejqaadjo .katex-display {
+#ejhyrizkqq .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ejejqaadjo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ejhyrizkqq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
 
-<table class="gt_table caption-top" style="width:100%;" data-quarto-bootstrap="false">
+<table class="gt_table caption-top" style="table-layout:fixed;width:100%;" data-quarto-bootstrap="false">
 <colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
+<col style="width: 28%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 9%">
+<col style="width: 11%">
 </colgroup>
 <thead>
 <tr class="gt_col_headings gt_spanner_row header">
-<th rowspan="2" id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Variáveis</strong></th>
+<th rowspan="2" id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Fatores</strong></th>
 <th colspan="4" id="level 1; stat_1" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
-<strong>Mudança no consumo de embutidos</strong>
+<strong>Mudança no consumo de embutidos na pandemia</strong>
 </div></th>
 <th rowspan="2" id="p.value" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Valor-p</strong></th>
-<th rowspan="2" id="a**Cramér**" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Cramér</strong></th>
+<th rowspan="2" id="Cramér" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Cramér</th>
 </tr>
 <tr class="gt_col_headings even">
 <th id="stat_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Não alterou</strong><br>852 (40%)</th>
@@ -2120,7 +2057,7 @@ Marcos Paulo Costa da Silva Dias
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_left" headers="label" style="font-weight: bold">Isolamento Social&lt;sup&gt;Q&lt;/sup&gt;</td>
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Isolamento social<sup>Q</sup></td>
 <td class="gt_row gt_center" headers="stat_1"><br>
 </td>
 <td class="gt_row gt_center" headers="stat_2"><br>
@@ -2129,33 +2066,33 @@ Marcos Paulo Costa da Silva Dias
 </td>
 <td class="gt_row gt_center" headers="stat_4"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">0,006</td>
-<td class="gt_row gt_center" headers="**Cramér**">0,076</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold; background-color: #C8E6C9">0,006</td>
+<td class="gt_row gt_center" headers="Cramér">0,076</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não</td>
-<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">412 (43%)</td>
+<td class="gt_row gt_center" headers="stat_1" style="background-color: #D1E7DD">412 (43%) ▲</td>
 <td class="gt_row gt_center" headers="stat_2">220 (23%)</td>
-<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">156 (16%)</td>
+<td class="gt_row gt_center" headers="stat_3" style="background-color: #F8D7DA">156 (16%) ▼</td>
 <td class="gt_row gt_center" headers="stat_4">164 (17%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Sim</td>
-<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">440 (37%)</td>
+<td class="gt_row gt_center" headers="stat_1" style="background-color: #F8D7DA">440 (37%) ▼</td>
 <td class="gt_row gt_center" headers="stat_2">296 (25%)</td>
-<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">251 (21%)</td>
+<td class="gt_row gt_center" headers="stat_3" style="background-color: #D1E7DD">251 (21%) ▲</td>
 <td class="gt_row gt_center" headers="stat_4">216 (18%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label" style="font-weight: bold">Diagnóstico de COVID-19&lt;sup&gt;Q&lt;/sup&gt;</td>
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Teve COVID-19<sup>Q</sup></td>
 <td class="gt_row gt_center" headers="stat_1"><br>
 </td>
 <td class="gt_row gt_center" headers="stat_2"><br>
@@ -2165,7 +2102,7 @@ Marcos Paulo Costa da Silva Dias
 <td class="gt_row gt_center" headers="stat_4"><br>
 </td>
 <td class="gt_row gt_center" headers="p.value">0,295</td>
-<td class="gt_row gt_center" headers="**Cramér**">0,041</td>
+<td class="gt_row gt_center" headers="Cramér">0,041</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não</td>
@@ -2175,7 +2112,7 @@ Marcos Paulo Costa da Silva Dias
 <td class="gt_row gt_center" headers="stat_4">284 (18%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="even">
@@ -2186,11 +2123,11 @@ Marcos Paulo Costa da Silva Dias
 <td class="gt_row gt_center" headers="stat_4">96 (16%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label" style="font-weight: bold">Consulta com Nutricionista&lt;sup&gt;Q&lt;/sup&gt;</td>
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Consulta com nutricionista<sup>Q</sup></td>
 <td class="gt_row gt_center" headers="stat_1"><br>
 </td>
 <td class="gt_row gt_center" headers="stat_2"><br>
@@ -2199,33 +2136,33 @@ Marcos Paulo Costa da Silva Dias
 </td>
 <td class="gt_row gt_center" headers="stat_4"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">&lt;0,001</td>
-<td class="gt_row gt_center" headers="**Cramér**">0,142</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold; background-color: #C8E6C9">&lt;0,001</td>
+<td class="gt_row gt_center" headers="Cramér">0,142</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não</td>
-<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">713 (41%)</td>
-<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">451 (26%)</td>
-<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">295 (17%)</td>
-<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">288 (16%)</td>
+<td class="gt_row gt_center" headers="stat_1" style="background-color: #D1E7DD">713 (41%) ▲</td>
+<td class="gt_row gt_center" headers="stat_2" style="background-color: #D1E7DD">451 (26%) ▲</td>
+<td class="gt_row gt_center" headers="stat_3" style="background-color: #F8D7DA">295 (17%) ▼</td>
+<td class="gt_row gt_center" headers="stat_4" style="background-color: #F8D7DA">288 (16%) ▼</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Sim</td>
-<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">139 (34%)</td>
-<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">65 (16%)</td>
-<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">112 (27%)</td>
-<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">92 (23%)</td>
+<td class="gt_row gt_center" headers="stat_1" style="background-color: #F8D7DA">139 (34%) ▼</td>
+<td class="gt_row gt_center" headers="stat_2" style="background-color: #F8D7DA">65 (16%) ▼</td>
+<td class="gt_row gt_center" headers="stat_3" style="background-color: #D1E7DD">112 (27%) ▲</td>
+<td class="gt_row gt_center" headers="stat_4" style="background-color: #D1E7DD">92 (23%) ▲</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label" style="font-weight: bold">Hábito de Fumar&lt;sup&gt;Q&lt;/sup&gt;</td>
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Fuma<sup>Q</sup></td>
 <td class="gt_row gt_center" headers="stat_1"><br>
 </td>
 <td class="gt_row gt_center" headers="stat_2"><br>
@@ -2234,18 +2171,18 @@ Marcos Paulo Costa da Silva Dias
 </td>
 <td class="gt_row gt_center" headers="stat_4"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">0,016</td>
-<td class="gt_row gt_center" headers="**Cramér**">0,069</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold; background-color: #C8E6C9">0,016</td>
+<td class="gt_row gt_center" headers="Cramér">0,069</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não</td>
 <td class="gt_row gt_center" headers="stat_1">814 (40%)</td>
 <td class="gt_row gt_center" headers="stat_2">492 (24%)</td>
 <td class="gt_row gt_center" headers="stat_3">394 (19%)</td>
-<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">350 (17%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="background-color: #F8D7DA">350 (17%) ▼</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="even">
@@ -2253,13 +2190,18 @@ Marcos Paulo Costa da Silva Dias
 <td class="gt_row gt_center" headers="stat_1">38 (36%)</td>
 <td class="gt_row gt_center" headers="stat_2">24 (23%)</td>
 <td class="gt_row gt_center" headers="stat_3">13 (12%)</td>
-<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">30 (29%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="background-color: #D1E7DD">30 (29%) ▲</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
-</tbody>
+</tbody><tfoot>
+<tr class="gt_sourcenotes odd">
+<td colspan="7" class="gt_sourcenote"><strong>%</strong> por linha &nbsp;|&nbsp; <sup>Q</sup> qui-quadrado &nbsp; <sup>F</sup> exato de Fisher &nbsp;|&nbsp; <span style="background:#d1e7dd; color:#000; padding:1px 6px;">▲ acima do esperado</span> <span style="background:#f8d7da; color:#000; padding:1px 6px;">▼ abaixo do esperado</span> (|resíduo| &gt; 1,96, só em variáveis significativas) &nbsp;|&nbsp; <span style="background:#c8e6c9; color:#000; padding:1px 6px;">p &lt; 0,05</span></td>
+</tr>
+</tfoot>
+
 </table>
 
 </div>
@@ -2269,30 +2211,30 @@ Marcos Paulo Costa da Silva Dias
 <div id="tabset-1-4">
 <div class="cell">
 <div class="cell-output-display">
-<div id="dwjfcqgydx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#dwjfcqgydx table {
+<div id="gcncbjiybo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gcncbjiybo table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#dwjfcqgydx thead, #dwjfcqgydx tbody, #dwjfcqgydx tfoot, #dwjfcqgydx tr, #dwjfcqgydx td, #dwjfcqgydx th {
+#gcncbjiybo thead, #gcncbjiybo tbody, #gcncbjiybo tfoot, #gcncbjiybo tr, #gcncbjiybo td, #gcncbjiybo th {
   border-style: none;
 }
 
-#dwjfcqgydx p {
+#gcncbjiybo p {
   margin: 0;
   padding: 0;
 }
 
-#dwjfcqgydx .gt_table {
+#gcncbjiybo .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
-  font-size: 16px;
+  font-size: 9.5px;
   font-weight: normal;
   font-style: normal;
   background-color: #FFFFFF;
@@ -2311,12 +2253,12 @@ Marcos Paulo Costa da Silva Dias
   border-left-color: #D3D3D3;
 }
 
-#dwjfcqgydx .gt_caption {
+#gcncbjiybo .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#dwjfcqgydx .gt_title {
+#gcncbjiybo .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2328,7 +2270,7 @@ Marcos Paulo Costa da Silva Dias
   border-bottom-width: 0;
 }
 
-#dwjfcqgydx .gt_subtitle {
+#gcncbjiybo .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2340,7 +2282,7 @@ Marcos Paulo Costa da Silva Dias
   border-top-width: 0;
 }
 
-#dwjfcqgydx .gt_heading {
+#gcncbjiybo .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2352,13 +2294,13 @@ Marcos Paulo Costa da Silva Dias
   border-right-color: #D3D3D3;
 }
 
-#dwjfcqgydx .gt_bottom_border {
+#gcncbjiybo .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#dwjfcqgydx .gt_col_headings {
+#gcncbjiybo .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2373,10 +2315,10 @@ Marcos Paulo Costa da Silva Dias
   border-right-color: #D3D3D3;
 }
 
-#dwjfcqgydx .gt_col_heading {
+#gcncbjiybo .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
-  font-size: 100%;
+  font-size: 10.5px;
   font-weight: normal;
   text-transform: inherit;
   border-left-style: none;
@@ -2393,10 +2335,10 @@ Marcos Paulo Costa da Silva Dias
   overflow-x: hidden;
 }
 
-#dwjfcqgydx .gt_column_spanner_outer {
+#gcncbjiybo .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
-  font-size: 100%;
+  font-size: 10.5px;
   font-weight: normal;
   text-transform: inherit;
   padding-top: 0;
@@ -2405,15 +2347,15 @@ Marcos Paulo Costa da Silva Dias
   padding-right: 4px;
 }
 
-#dwjfcqgydx .gt_column_spanner_outer:first-child {
+#gcncbjiybo .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#dwjfcqgydx .gt_column_spanner_outer:last-child {
+#gcncbjiybo .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#dwjfcqgydx .gt_column_spanner {
+#gcncbjiybo .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2425,11 +2367,11 @@ Marcos Paulo Costa da Silva Dias
   width: 100%;
 }
 
-#dwjfcqgydx .gt_spanner_row {
+#gcncbjiybo .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#dwjfcqgydx .gt_group_heading {
+#gcncbjiybo .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2455,7 +2397,7 @@ Marcos Paulo Costa da Silva Dias
   text-align: left;
 }
 
-#dwjfcqgydx .gt_empty_group_heading {
+#gcncbjiybo .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2470,23 +2412,23 @@ Marcos Paulo Costa da Silva Dias
   vertical-align: middle;
 }
 
-#dwjfcqgydx .gt_from_md > :first-child {
+#gcncbjiybo .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#dwjfcqgydx .gt_from_md > :last-child {
+#gcncbjiybo .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#dwjfcqgydx .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
+#gcncbjiybo .gt_row {
+  padding-top: 1.2px;
+  padding-bottom: 1.2px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 10px;
   border-top-style: solid;
   border-top-width: 1px;
-  border-top-color: #D3D3D3;
+  border-top-color: #E0E7EE;
   border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
@@ -2497,7 +2439,7 @@ Marcos Paulo Costa da Silva Dias
   overflow-x: hidden;
 }
 
-#dwjfcqgydx .gt_stub {
+#gcncbjiybo .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2510,7 +2452,7 @@ Marcos Paulo Costa da Silva Dias
   padding-right: 5px;
 }
 
-#dwjfcqgydx .gt_stub_row_group {
+#gcncbjiybo .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2524,15 +2466,15 @@ Marcos Paulo Costa da Silva Dias
   vertical-align: top;
 }
 
-#dwjfcqgydx .gt_row_group_first td {
+#gcncbjiybo .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#dwjfcqgydx .gt_row_group_first th {
+#gcncbjiybo .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#dwjfcqgydx .gt_summary_row {
+#gcncbjiybo .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2542,16 +2484,16 @@ Marcos Paulo Costa da Silva Dias
   padding-right: 5px;
 }
 
-#dwjfcqgydx .gt_first_summary_row {
+#gcncbjiybo .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#dwjfcqgydx .gt_first_summary_row.thick {
+#gcncbjiybo .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#dwjfcqgydx .gt_last_summary_row {
+#gcncbjiybo .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2561,7 +2503,7 @@ Marcos Paulo Costa da Silva Dias
   border-bottom-color: #D3D3D3;
 }
 
-#dwjfcqgydx .gt_grand_summary_row {
+#gcncbjiybo .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2571,7 +2513,7 @@ Marcos Paulo Costa da Silva Dias
   padding-right: 5px;
 }
 
-#dwjfcqgydx .gt_first_grand_summary_row {
+#gcncbjiybo .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2581,7 +2523,7 @@ Marcos Paulo Costa da Silva Dias
   border-top-color: #D3D3D3;
 }
 
-#dwjfcqgydx .gt_last_grand_summary_row_top {
+#gcncbjiybo .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2591,11 +2533,11 @@ Marcos Paulo Costa da Silva Dias
   border-bottom-color: #D3D3D3;
 }
 
-#dwjfcqgydx .gt_striped {
+#gcncbjiybo .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#dwjfcqgydx .gt_table_body {
+#gcncbjiybo .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2604,7 +2546,7 @@ Marcos Paulo Costa da Silva Dias
   border-bottom-color: #D3D3D3;
 }
 
-#dwjfcqgydx .gt_footnotes {
+#gcncbjiybo .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2618,7 +2560,7 @@ Marcos Paulo Costa da Silva Dias
   border-right-color: #D3D3D3;
 }
 
-#dwjfcqgydx .gt_footnote {
+#gcncbjiybo .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2627,7 +2569,7 @@ Marcos Paulo Costa da Silva Dias
   padding-right: 5px;
 }
 
-#dwjfcqgydx .gt_sourcenotes {
+#gcncbjiybo .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2641,102 +2583,102 @@ Marcos Paulo Costa da Silva Dias
   border-right-color: #D3D3D3;
 }
 
-#dwjfcqgydx .gt_sourcenote {
-  font-size: 90%;
+#gcncbjiybo .gt_sourcenote {
+  font-size: 9px;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
 
-#dwjfcqgydx .gt_left {
+#gcncbjiybo .gt_left {
   text-align: left;
 }
 
-#dwjfcqgydx .gt_center {
+#gcncbjiybo .gt_center {
   text-align: center;
 }
 
-#dwjfcqgydx .gt_right {
+#gcncbjiybo .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#dwjfcqgydx .gt_font_normal {
+#gcncbjiybo .gt_font_normal {
   font-weight: normal;
 }
 
-#dwjfcqgydx .gt_font_bold {
+#gcncbjiybo .gt_font_bold {
   font-weight: bold;
 }
 
-#dwjfcqgydx .gt_font_italic {
+#gcncbjiybo .gt_font_italic {
   font-style: italic;
 }
 
-#dwjfcqgydx .gt_super {
+#gcncbjiybo .gt_super {
   font-size: 65%;
 }
 
-#dwjfcqgydx .gt_footnote_marks {
+#gcncbjiybo .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#dwjfcqgydx .gt_asterisk {
+#gcncbjiybo .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#dwjfcqgydx .gt_indent_1 {
+#gcncbjiybo .gt_indent_1 {
   text-indent: 5px;
 }
 
-#dwjfcqgydx .gt_indent_2 {
+#gcncbjiybo .gt_indent_2 {
   text-indent: 10px;
 }
 
-#dwjfcqgydx .gt_indent_3 {
+#gcncbjiybo .gt_indent_3 {
   text-indent: 15px;
 }
 
-#dwjfcqgydx .gt_indent_4 {
+#gcncbjiybo .gt_indent_4 {
   text-indent: 20px;
 }
 
-#dwjfcqgydx .gt_indent_5 {
+#gcncbjiybo .gt_indent_5 {
   text-indent: 25px;
 }
 
-#dwjfcqgydx .katex-display {
+#gcncbjiybo .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#dwjfcqgydx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#gcncbjiybo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
 
-<table class="gt_table caption-top" style="width:100%;" data-quarto-bootstrap="false">
+<table class="gt_table caption-top" style="table-layout:fixed;width:100%;" data-quarto-bootstrap="false">
 <colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
+<col style="width: 28%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 9%">
+<col style="width: 11%">
 </colgroup>
 <thead>
 <tr class="gt_col_headings gt_spanner_row header">
-<th rowspan="2" id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Variáveis</strong></th>
+<th rowspan="2" id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Fatores</strong></th>
 <th colspan="4" id="level 1; stat_1" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
-<strong>Mudança no consumo de embutidos</strong>
+<strong>Mudança no consumo de embutidos na pandemia</strong>
 </div></th>
 <th rowspan="2" id="p.value" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Valor-p</strong></th>
-<th rowspan="2" id="a**Cramér**" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Cramér</strong></th>
+<th rowspan="2" id="Cramér" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Cramér</th>
 </tr>
 <tr class="gt_col_headings even">
 <th id="stat_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Não alterou</strong><br>852 (40%)</th>
@@ -2747,7 +2689,7 @@ Marcos Paulo Costa da Silva Dias
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_left" headers="label" style="font-weight: bold">Relato de Ansiedade&lt;sup&gt;Q&lt;/sup&gt;</td>
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Ansiedade<sup>Q</sup></td>
 <td class="gt_row gt_center" headers="stat_1"><br>
 </td>
 <td class="gt_row gt_center" headers="stat_2"><br>
@@ -2756,33 +2698,33 @@ Marcos Paulo Costa da Silva Dias
 </td>
 <td class="gt_row gt_center" headers="stat_4"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">0,001</td>
-<td class="gt_row gt_center" headers="**Cramér**">0,087</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold; background-color: #C8E6C9">0,001</td>
+<td class="gt_row gt_center" headers="Cramér">0,087</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não</td>
-<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">476 (43%)</td>
-<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">233 (21%)</td>
+<td class="gt_row gt_center" headers="stat_1" style="background-color: #D1E7DD">476 (43%) ▲</td>
+<td class="gt_row gt_center" headers="stat_2" style="background-color: #F8D7DA">233 (21%) ▼</td>
 <td class="gt_row gt_center" headers="stat_3">199 (18%)</td>
 <td class="gt_row gt_center" headers="stat_4">201 (18%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Sim</td>
-<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">376 (36%)</td>
-<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">283 (27%)</td>
+<td class="gt_row gt_center" headers="stat_1" style="background-color: #F8D7DA">376 (36%) ▼</td>
+<td class="gt_row gt_center" headers="stat_2" style="background-color: #D1E7DD">283 (27%) ▲</td>
 <td class="gt_row gt_center" headers="stat_3">208 (20%)</td>
 <td class="gt_row gt_center" headers="stat_4">179 (17%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label" style="font-weight: bold">Relato de Depressão&lt;sup&gt;Q&lt;/sup&gt;</td>
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Depressão<sup>Q</sup></td>
 <td class="gt_row gt_center" headers="stat_1"><br>
 </td>
 <td class="gt_row gt_center" headers="stat_2"><br>
@@ -2791,8 +2733,8 @@ Marcos Paulo Costa da Silva Dias
 </td>
 <td class="gt_row gt_center" headers="stat_4"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">0,046</td>
-<td class="gt_row gt_center" headers="**Cramér**">0,061</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold; background-color: #C8E6C9">0,046</td>
+<td class="gt_row gt_center" headers="Cramér">0,061</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não</td>
@@ -2802,7 +2744,7 @@ Marcos Paulo Costa da Silva Dias
 <td class="gt_row gt_center" headers="stat_4">327 (18%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="even">
@@ -2813,11 +2755,11 @@ Marcos Paulo Costa da Silva Dias
 <td class="gt_row gt_center" headers="stat_4">53 (15%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label" style="font-weight: bold">Relato de Insônia&lt;sup&gt;Q&lt;/sup&gt;</td>
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Insônia<sup>Q</sup></td>
 <td class="gt_row gt_center" headers="stat_1"><br>
 </td>
 <td class="gt_row gt_center" headers="stat_2"><br>
@@ -2826,33 +2768,33 @@ Marcos Paulo Costa da Silva Dias
 </td>
 <td class="gt_row gt_center" headers="stat_4"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">0,012</td>
-<td class="gt_row gt_center" headers="**Cramér**">0,071</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold; background-color: #C8E6C9">0,012</td>
+<td class="gt_row gt_center" headers="Cramér">0,071</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não</td>
 <td class="gt_row gt_center" headers="stat_1">751 (40%)</td>
-<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">424 (23%)</td>
+<td class="gt_row gt_center" headers="stat_2" style="background-color: #F8D7DA">424 (23%) ▼</td>
 <td class="gt_row gt_center" headers="stat_3">354 (19%)</td>
 <td class="gt_row gt_center" headers="stat_4">334 (18%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Sim</td>
 <td class="gt_row gt_center" headers="stat_1">101 (35%)</td>
-<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">92 (32%)</td>
+<td class="gt_row gt_center" headers="stat_2" style="background-color: #D1E7DD">92 (32%) ▲</td>
 <td class="gt_row gt_center" headers="stat_3">53 (18%)</td>
 <td class="gt_row gt_center" headers="stat_4">46 (16%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label" style="font-weight: bold">Relato de Enxaqueca&lt;sup&gt;Q&lt;/sup&gt;</td>
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Enxaqueca<sup>Q</sup></td>
 <td class="gt_row gt_center" headers="stat_1"><br>
 </td>
 <td class="gt_row gt_center" headers="stat_2"><br>
@@ -2862,7 +2804,7 @@ Marcos Paulo Costa da Silva Dias
 <td class="gt_row gt_center" headers="stat_4"><br>
 </td>
 <td class="gt_row gt_center" headers="p.value">0,370</td>
-<td class="gt_row gt_center" headers="**Cramér**">0,038</td>
+<td class="gt_row gt_center" headers="Cramér">0,038</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não</td>
@@ -2872,7 +2814,7 @@ Marcos Paulo Costa da Silva Dias
 <td class="gt_row gt_center" headers="stat_4">318 (17%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
 <tr class="even">
@@ -2883,10 +2825,15 @@ Marcos Paulo Costa da Silva Dias
 <td class="gt_row gt_center" headers="stat_4">62 (20%)</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
-<td class="gt_row gt_center" headers="**Cramér**"><br>
+<td class="gt_row gt_center" headers="Cramér"><br>
 </td>
 </tr>
-</tbody>
+</tbody><tfoot>
+<tr class="gt_sourcenotes odd">
+<td colspan="7" class="gt_sourcenote"><strong>%</strong> por linha &nbsp;|&nbsp; <sup>Q</sup> qui-quadrado &nbsp; <sup>F</sup> exato de Fisher &nbsp;|&nbsp; <span style="background:#d1e7dd; color:#000; padding:1px 6px;">▲ acima do esperado</span> <span style="background:#f8d7da; color:#000; padding:1px 6px;">▼ abaixo do esperado</span> (|resíduo| &gt; 1,96, só em variáveis significativas) &nbsp;|&nbsp; <span style="background:#c8e6c9; color:#000; padding:1px 6px;">p &lt; 0,05</span></td>
+</tr>
+</tfoot>
+
 </table>
 
 </div>
@@ -2895,81 +2842,100 @@ Marcos Paulo Costa da Silva Dias
 </div>
 </div>
 </div>
-<div class="box-greypeq">
-<p>Valores: <span class="math inline">\(n\)</span> (% por linha). <strong>Q:</strong> qui-quadrado; <strong>F:</strong> Fisher (p-valor simulado). <strong>Negrito:</strong> <span class="math inline">\(p &lt; 0{,}05\)</span> e casela influente (<span class="math inline">\(|z| &gt; 1{,}96\)</span>).<br>
-Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">\(n = 2\)</span>; Outro, <span class="math inline">\(n = 6\)</span>) pedem cautela.</p>
-</div>
 </section>
-<section id="associações-fatores-econômicos-e-acompanhamento" class="slide level2">
-<h2>Associações: Fatores Econômicos e Acompanhamento</h2>
+<section id="perfil-da-variável-resposta-e-panorama-geral" class="slide level2">
+<h2>Perfil da Variável Resposta e Panorama Geral</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="box-greypeq">
-<p><strong>Dificuldade Financeira (<span class="math inline">\(V = 0{,}144; p &lt; 0{,}001\)</span>)</strong></p>
+<h3 id="distribuição-do-consumo-n-2.155">Distribuição do Consumo (<span class="math inline">\(N = 2.155\)</span>)</h3>
 <ul>
-<li><p><strong>Com dificuldade financeira:</strong> Forte polarização alimentar — excesso em <em>Aumentou</em> (+4,00) e em <em>Diminuiu</em> (+4,03).</p></li>
-<li><p><strong>Sem dificuldade financeira:</strong> Maior estabilidade na dieta habitual (<em>Não alterou</em>, resíduo +5,22).</p></li>
+<li><p><strong>39,5% Não alterou (<span class="math inline">\(n = 852\)</span>):</strong> A maior parcela manteve seu padrão habitual pré-pandemia.</p></li>
+<li><p><strong>23,9% Aumentou (<span class="math inline">\(n = 516\)</span>):</strong> Quase 1 em cada 4 adultos aumentou a ingestão de embutidos.</p></li>
+<li><p><strong>18,9% Não consumo (<span class="math inline">\(n = 407\)</span>):</strong> Pessoas que já não consumiam carnes processadas.</p></li>
+<li><p><strong>17,6% Diminuiu (<span class="math inline">\(n = 380\)</span>):</strong> Conseguiram reduzir ou cortar o consumo na crise.</p></li>
 </ul>
-</div>
 </div><div class="column" style="width:50%;">
-<div class="box-greypeq">
-<p><strong>Consulta com Nutricionista (<span class="math inline">\(V = 0{,}142; p &lt; 0{,}001\)</span>)</strong></p>
+<h3 id="panorama-geral-das-associações">Panorama Geral das Associações</h3>
 <ul>
-<li><p><strong>Com nutricionista:</strong> Forte fator protetivo — excesso em <em>Não consumo</em> (+4,91) e em <em>Diminuiu</em> (+2,89).</p></li>
-<li><p><strong>Sem nutricionista:</strong> Excesso significativo de aumento no consumo de embutidos (+4,21).</p></li>
+<li><p><strong>Alta Significância:</strong> <strong>13 das 15 variáveis qualitativas</strong> apresentaram associação significativa com a mudança no consumo (<span class="math inline">\(p &lt; 0{,}05\)</span>).</p></li>
+<li><p><strong>Maiores Forças de Associação (<span class="math inline">\(V\)</span> de Cramér):</strong></p>
+<ul>
+<li>Dificuldade Financeira (<span class="math inline">\(V = 0{,}144\)</span>)<br>
+</li>
+<li>Consulta com Nutricionista (<span class="math inline">\(V = 0{,}142\)</span>)<br>
+</li>
+<li>Ansiedade (<span class="math inline">\(V = 0{,}087\)</span>) e Gênero (<span class="math inline">\(V = 0{,}079\)</span>)</li>
+</ul></li>
+<li><p><strong>Variáveis Independentes:</strong> Apenas <strong>COVID-19</strong> (<span class="math inline">\(p = 0{,}295\)</span>) e <strong>Enxaqueca</strong> (<span class="math inline">\(p = 0{,}370\)</span>) não tiveram relação significativa.</p></li>
 </ul>
-</div>
 </div></div>
 </section>
-<section id="associações-demografia-e-saúde-mental" class="slide level2">
-<h2>Associações: Demografia e Saúde Mental</h2>
+<section id="principais-associações-renda-e-nutricionista" class="slide level2">
+<h2>Principais Associações: Renda e Nutricionista</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="box-greypeq">
-<p><strong>Gênero do Participante (<span class="math inline">\(V = 0{,}108; p &lt; 0{,}001\)</span>)</strong></p>
+<h3 id="dificuldade-financeira-v-0144-p-0001">Dificuldade Financeira (<span class="math inline">\(V = 0{,}144; p &lt; 0{,}001\)</span>)</h3>
 <ul>
-<li><p><strong>Mulheres:</strong> Concentração expressiva na categoria de <em>Não consumo</em> (resíduo +5,00).</p></li>
-<li><p><strong>Homens:</strong> Déficit significativo de não consumidores (-5,00), com maior tendência de consumo contínuo.</p></li>
+<li><p><strong>Quem passou aperto:</strong> Polarização evidente nos extremos — excesso de quem aumentou (resíduo <span class="math inline">\(+4{,}0\)</span>) e de quem cortou (resíduo <span class="math inline">\(+4{,}0\)</span>).</p></li>
+<li><p><strong>Quem não teve aperto:</strong> Alta estabilidade de consumo (<em>Não alterou</em>, resíduo <span class="math inline">\(+5{,}22\)</span>).</p></li>
+<li><p><strong>Interpretação:</strong> Crise financeira levou à troca por opções baratas ou ao corte orçamentário drástico.</p></li>
 </ul>
-</div>
 </div><div class="column" style="width:50%;">
-<div class="box-greypeq">
-<p><strong>Sintomas Emocionais (<span class="math inline">\(p = 0{,}001\)</span>)</strong></p>
+<h3 id="consulta-com-nutricionista-v-0142-p-0001">Consulta com Nutricionista (<span class="math inline">\(V = 0{,}142; p &lt; 0{,}001\)</span>)</h3>
 <ul>
-<li><p><strong>Ansiedade:</strong> Participantes com relato de ansiedade apresentaram excesso em <em>Aumentou</em> (+3,29).</p></li>
-<li><p><strong>Insônia:</strong> O mesmo padrão de excesso de consumo foi observado em participantes com insônia (+3,26).</p></li>
+<li><p><strong>Com nutricionista (Proteção):</strong> Excesso em não consumo (<span class="math inline">\(+4{,}91\)</span>) e redução (<span class="math inline">\(+2{,}89\)</span>); forte déficit de aumento (<span class="math inline">\(-4{,}21\)</span>).</p></li>
+<li><p><strong>Sem nutricionista:</strong> Menor taxa de corte e propensão a aumentar o consumo.</p></li>
+<li><p><strong>Interpretação:</strong> O acompanhamento profissional funcionou como barreira direta ao ultraprocessado.</p></li>
 </ul>
-</div>
+</div></div>
+</section>
+<section id="principais-associações-gênero-e-saúde-mental" class="slide level2">
+<h2>Principais Associações: Gênero e Saúde Mental</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="diferenças-por-gênero-v-0079-p-0001">Diferenças por Gênero (<span class="math inline">\(V = 0{,}079; p &lt; 0{,}001\)</span>)</h3>
+<ul>
+<li><p><strong>Mulheres:</strong> Maior distância habitual dos embutidos — forte concentração no não consumo (resíduo <span class="math inline">\(+4{,}97\)</span>).</p></li>
+<li><p><strong>Homens:</strong> Raramente deixam de consumir carnes processadas — déficit em não consumo (resíduo <span class="math inline">\(-4{,}99\)</span>).</p></li>
+<li><p><strong>Interpretação:</strong> Mulheres mantiveram maior preocupação dietética e menor consumo basal de ultraprocessados.</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="ansiedade-e-insônia-p-le-0012">Ansiedade e Insônia (<span class="math inline">\(p \le 0{,}012\)</span>)</h3>
+<ul>
+<li><p><strong>Ansiedade:</strong> Quem relatou sintomas de ansiedade teve excesso estatisticamente significativo de aumento (resíduo <span class="math inline">\(+3{,}29\)</span>).</p></li>
+<li><p><strong>Insônia:</strong> Quem perdeu o sono na pandemia também aumentou o consumo de embutidos (resíduo <span class="math inline">\(+3{,}26\)</span>).</p></li>
+<li><p><strong>Interpretação:</strong> Alimentos palatáveis e práticos atuaram como válvula de escape emocional durante o confinamento.</p></li>
+</ul>
 </div></div>
 </section>
 <section id="tabela-2-variáveis-quantitativas" class="slide level2">
 <h2>Tabela 2: Variáveis Quantitativas</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="vwffnadqgl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#vwffnadqgl table {
+<div id="yeohhjqevs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#yeohhjqevs table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#vwffnadqgl thead, #vwffnadqgl tbody, #vwffnadqgl tfoot, #vwffnadqgl tr, #vwffnadqgl td, #vwffnadqgl th {
+#yeohhjqevs thead, #yeohhjqevs tbody, #yeohhjqevs tfoot, #yeohhjqevs tr, #yeohhjqevs td, #yeohhjqevs th {
   border-style: none;
 }
 
-#vwffnadqgl p {
+#yeohhjqevs p {
   margin: 0;
   padding: 0;
 }
 
-#vwffnadqgl .gt_table {
+#yeohhjqevs .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
-  font-size: 16px;
+  font-size: 9.5px;
   font-weight: normal;
   font-style: normal;
   background-color: #FFFFFF;
@@ -2988,12 +2954,12 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   border-left-color: #D3D3D3;
 }
 
-#vwffnadqgl .gt_caption {
+#yeohhjqevs .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#vwffnadqgl .gt_title {
+#yeohhjqevs .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3005,7 +2971,7 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   border-bottom-width: 0;
 }
 
-#vwffnadqgl .gt_subtitle {
+#yeohhjqevs .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3017,7 +2983,7 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   border-top-width: 0;
 }
 
-#vwffnadqgl .gt_heading {
+#yeohhjqevs .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3029,13 +2995,13 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   border-right-color: #D3D3D3;
 }
 
-#vwffnadqgl .gt_bottom_border {
+#yeohhjqevs .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vwffnadqgl .gt_col_headings {
+#yeohhjqevs .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3050,10 +3016,10 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   border-right-color: #D3D3D3;
 }
 
-#vwffnadqgl .gt_col_heading {
+#yeohhjqevs .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
-  font-size: 100%;
+  font-size: 10.5px;
   font-weight: normal;
   text-transform: inherit;
   border-left-style: none;
@@ -3070,10 +3036,10 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   overflow-x: hidden;
 }
 
-#vwffnadqgl .gt_column_spanner_outer {
+#yeohhjqevs .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
-  font-size: 100%;
+  font-size: 10.5px;
   font-weight: normal;
   text-transform: inherit;
   padding-top: 0;
@@ -3082,15 +3048,15 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   padding-right: 4px;
 }
 
-#vwffnadqgl .gt_column_spanner_outer:first-child {
+#yeohhjqevs .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vwffnadqgl .gt_column_spanner_outer:last-child {
+#yeohhjqevs .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vwffnadqgl .gt_column_spanner {
+#yeohhjqevs .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3102,11 +3068,11 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   width: 100%;
 }
 
-#vwffnadqgl .gt_spanner_row {
+#yeohhjqevs .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#vwffnadqgl .gt_group_heading {
+#yeohhjqevs .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3132,7 +3098,7 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   text-align: left;
 }
 
-#vwffnadqgl .gt_empty_group_heading {
+#yeohhjqevs .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3147,23 +3113,23 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   vertical-align: middle;
 }
 
-#vwffnadqgl .gt_from_md > :first-child {
+#yeohhjqevs .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vwffnadqgl .gt_from_md > :last-child {
+#yeohhjqevs .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vwffnadqgl .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
+#yeohhjqevs .gt_row {
+  padding-top: 1.5px;
+  padding-bottom: 1.5px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 10px;
   border-top-style: solid;
   border-top-width: 1px;
-  border-top-color: #D3D3D3;
+  border-top-color: #E0E7EE;
   border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
@@ -3174,7 +3140,7 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   overflow-x: hidden;
 }
 
-#vwffnadqgl .gt_stub {
+#yeohhjqevs .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3187,7 +3153,7 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   padding-right: 5px;
 }
 
-#vwffnadqgl .gt_stub_row_group {
+#yeohhjqevs .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3201,15 +3167,15 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   vertical-align: top;
 }
 
-#vwffnadqgl .gt_row_group_first td {
+#yeohhjqevs .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vwffnadqgl .gt_row_group_first th {
+#yeohhjqevs .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#vwffnadqgl .gt_summary_row {
+#yeohhjqevs .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3219,16 +3185,16 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   padding-right: 5px;
 }
 
-#vwffnadqgl .gt_first_summary_row {
+#yeohhjqevs .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#vwffnadqgl .gt_first_summary_row.thick {
+#yeohhjqevs .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vwffnadqgl .gt_last_summary_row {
+#yeohhjqevs .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3238,7 +3204,7 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   border-bottom-color: #D3D3D3;
 }
 
-#vwffnadqgl .gt_grand_summary_row {
+#yeohhjqevs .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3248,7 +3214,7 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   padding-right: 5px;
 }
 
-#vwffnadqgl .gt_first_grand_summary_row {
+#yeohhjqevs .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3258,7 +3224,7 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   border-top-color: #D3D3D3;
 }
 
-#vwffnadqgl .gt_last_grand_summary_row_top {
+#yeohhjqevs .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3268,11 +3234,11 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   border-bottom-color: #D3D3D3;
 }
 
-#vwffnadqgl .gt_striped {
+#yeohhjqevs .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vwffnadqgl .gt_table_body {
+#yeohhjqevs .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3281,7 +3247,7 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   border-bottom-color: #D3D3D3;
 }
 
-#vwffnadqgl .gt_footnotes {
+#yeohhjqevs .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3295,7 +3261,7 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   border-right-color: #D3D3D3;
 }
 
-#vwffnadqgl .gt_footnote {
+#yeohhjqevs .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3304,7 +3270,7 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   padding-right: 5px;
 }
 
-#vwffnadqgl .gt_sourcenotes {
+#yeohhjqevs .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3318,128 +3284,132 @@ Categorias com poucas observações (ex.: Analfabeto, <span class="math inline">
   border-right-color: #D3D3D3;
 }
 
-#vwffnadqgl .gt_sourcenote {
-  font-size: 90%;
+#yeohhjqevs .gt_sourcenote {
+  font-size: 9px;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
 
-#vwffnadqgl .gt_left {
+#yeohhjqevs .gt_left {
   text-align: left;
 }
 
-#vwffnadqgl .gt_center {
+#yeohhjqevs .gt_center {
   text-align: center;
 }
 
-#vwffnadqgl .gt_right {
+#yeohhjqevs .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vwffnadqgl .gt_font_normal {
+#yeohhjqevs .gt_font_normal {
   font-weight: normal;
 }
 
-#vwffnadqgl .gt_font_bold {
+#yeohhjqevs .gt_font_bold {
   font-weight: bold;
 }
 
-#vwffnadqgl .gt_font_italic {
+#yeohhjqevs .gt_font_italic {
   font-style: italic;
 }
 
-#vwffnadqgl .gt_super {
+#yeohhjqevs .gt_super {
   font-size: 65%;
 }
 
-#vwffnadqgl .gt_footnote_marks {
+#yeohhjqevs .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#vwffnadqgl .gt_asterisk {
+#yeohhjqevs .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vwffnadqgl .gt_indent_1 {
+#yeohhjqevs .gt_indent_1 {
   text-indent: 5px;
 }
 
-#vwffnadqgl .gt_indent_2 {
+#yeohhjqevs .gt_indent_2 {
   text-indent: 10px;
 }
 
-#vwffnadqgl .gt_indent_3 {
+#yeohhjqevs .gt_indent_3 {
   text-indent: 15px;
 }
 
-#vwffnadqgl .gt_indent_4 {
+#yeohhjqevs .gt_indent_4 {
   text-indent: 20px;
 }
 
-#vwffnadqgl .gt_indent_5 {
+#yeohhjqevs .gt_indent_5 {
   text-indent: 25px;
 }
 
-#vwffnadqgl .katex-display {
+#yeohhjqevs .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#vwffnadqgl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#yeohhjqevs div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
 
-<table class="gt_table caption-top" style="width:100%;" data-quarto-bootstrap="false">
+<table class="gt_table caption-top" style="table-layout:fixed;width:100%;" data-quarto-bootstrap="false">
 <colgroup>
 <col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 8%">
+<col style="width: 14%">
+<col style="width: 23%">
 </colgroup>
 <thead>
 <tr class="gt_col_headings gt_spanner_row header">
-<th rowspan="2" id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Variáveis Quantitativas</strong></th>
-<th colspan="4" id="level 1; stat_1" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
-<strong>Mudança no consumo de embutidos</strong>
+<th rowspan="2" id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Variável</strong></th>
+<th colspan="4" id="**Média (DP) por mudança no consumo de embutidos**" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+<strong>Média (DP) por mudança no consumo de embutidos</strong>
 </div></th>
-<th rowspan="2" id="p.value" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Valor-p</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span></th>
+<th rowspan="2" id="p.value" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Valor-p</strong></th>
+<th rowspan="2" id="Teste" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Teste</strong></th>
+<th rowspan="2" id="Comp" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Comparações múltiplas</strong></th>
 </tr>
 <tr class="gt_col_headings even">
-<th id="stat_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Não alterou</strong><br>
-N = 852<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
-<th id="stat_2" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Aumentou</strong><br>
-N = 516<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
-<th id="stat_3" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Não consumo</strong><br>
-N = 407<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
-<th id="stat_4" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Diminuiu</strong><br>
-N = 380<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+<th id="stat_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Não alterou</strong><br>852 (40%)</th>
+<th id="stat_2" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Aumentou</strong><br>516 (24%)</th>
+<th id="stat_3" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Não consumo</strong><br>407 (19%)</th>
+<th id="stat_4" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Diminuiu</strong><br>380 (18%)</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
 <td class="gt_row gt_left" headers="label" style="font-weight: bold">Idade (anos)</td>
-<td class="gt_row gt_center" headers="stat_1">35,13 (12,52)</td>
-<td class="gt_row gt_center" headers="stat_2">33,44 (10,76)</td>
-<td class="gt_row gt_center" headers="stat_3">34,29 (12,96)</td>
-<td class="gt_row gt_center" headers="stat_4">36,72 (14,13)</td>
-<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">0,001</td>
+<td class="gt_row gt_center" headers="stat_1">35,1 (12,5)</td>
+<td class="gt_row gt_center" headers="stat_2">33,4 (10,8)</td>
+<td class="gt_row gt_center" headers="stat_3">34,3 (13,0)</td>
+<td class="gt_row gt_center" headers="stat_4">36,7 (14,1)</td>
+<td class="gt_row gt_center" headers="p.value" style="background-color: #C8E6C9; font-weight: bold">0,001</td>
+<td class="gt_row gt_left" headers="Teste">ANOVA de Welch<br>(Levene p &lt; 0,001)</td>
+<td class="gt_row gt_left" headers="Comp"><i>Games-Howell:</i><br>Não alterou × Aumentou (p = 0,040)<br>Aumentou × Diminuiu (p &lt; 0,001)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label" style="font-weight: bold">Peso (kg)</td>
-<td class="gt_row gt_center" headers="stat_1">70,24 (15,33)</td>
-<td class="gt_row gt_center" headers="stat_2">74,02 (17,59)</td>
-<td class="gt_row gt_center" headers="stat_3">65,09 (13,99)</td>
-<td class="gt_row gt_center" headers="stat_4">70,73 (15,63)</td>
-<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">&lt;0,001</td>
+<td class="gt_row gt_center" headers="stat_1">70,2 (15,3)</td>
+<td class="gt_row gt_center" headers="stat_2">74,0 (17,6)</td>
+<td class="gt_row gt_center" headers="stat_3">65,1 (14,0)</td>
+<td class="gt_row gt_center" headers="stat_4">70,7 (15,6)</td>
+<td class="gt_row gt_center" headers="p.value" style="background-color: #C8E6C9; font-weight: bold">&lt; 0,001</td>
+<td class="gt_row gt_left" headers="Teste">ANOVA de Welch<br>(Levene p &lt; 0,001)</td>
+<td class="gt_row gt_left" headers="Comp"><i>Games-Howell:</i><br>Não alterou × Aumentou (p &lt; 0,001)<br>Não alterou × Não consumo (p &lt; 0,001)<br>Aumentou × Não consumo (p &lt; 0,001)<br>Aumentou × Diminuiu (p = 0,017)<br>Não consumo × Diminuiu (p &lt; 0,001)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label" style="font-weight: bold">Altura (m)</td>
@@ -3447,22 +3417,23 @@ N = 380<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
 <td class="gt_row gt_center" headers="stat_2">1,66 (0,09)</td>
 <td class="gt_row gt_center" headers="stat_3">1,64 (0,08)</td>
 <td class="gt_row gt_center" headers="stat_4">1,66 (0,09)</td>
-<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">0,001</td>
+<td class="gt_row gt_center" headers="p.value" style="background-color: #C8E6C9; font-weight: bold">0,003</td>
+<td class="gt_row gt_left" headers="Teste">ANOVA<br>(Levene p = 0,058)</td>
+<td class="gt_row gt_left" headers="Comp"><i>Tukey:</i><br>Não alterou × Não consumo (p = 0,009)<br>Aumentou × Não consumo (p = 0,003)<br>Não consumo × Diminuiu (p = 0,039)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label" style="font-weight: bold">IMC (kg/m²)</td>
-<td class="gt_row gt_center" headers="stat_1">25,49 (4,86)</td>
-<td class="gt_row gt_center" headers="stat_2">26,72 (5,51)</td>
-<td class="gt_row gt_center" headers="stat_3">24,11 (4,69)</td>
-<td class="gt_row gt_center" headers="stat_4">25,69 (5,06)</td>
-<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">&lt;0,001</td>
+<td class="gt_row gt_center" headers="stat_1">25,5 (4,9)</td>
+<td class="gt_row gt_center" headers="stat_2">26,7 (5,5)</td>
+<td class="gt_row gt_center" headers="stat_3">24,1 (4,7)</td>
+<td class="gt_row gt_center" headers="stat_4">25,7 (5,1)</td>
+<td class="gt_row gt_center" headers="p.value" style="background-color: #C8E6C9; font-weight: bold">&lt; 0,001</td>
+<td class="gt_row gt_left" headers="Teste">ANOVA de Welch<br>(Levene p &lt; 0,001)</td>
+<td class="gt_row gt_left" headers="Comp"><i>Games-Howell:</i><br>Não alterou × Aumentou (p &lt; 0,001)<br>Não alterou × Não consumo (p &lt; 0,001)<br>Aumentou × Não consumo (p &lt; 0,001)<br>Aumentou × Diminuiu (p = 0,019)<br>Não consumo × Diminuiu (p &lt; 0,001)</td>
 </tr>
 </tbody><tfoot>
-<tr class="gt_footnotes odd">
-<td colspan="6" class="gt_footnote"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> Média (Desvio Padrão)</td>
-</tr>
-<tr class="gt_footnotes even">
-<td colspan="6" class="gt_footnote"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span> One-way analysis of means (not assuming equal variances)</td>
+<tr class="gt_sourcenotes odd">
+<td colspan="8" class="gt_sourcenote"><span style="background:#c8e6c9; color:#000; padding:1px 6px;">p &lt; 0,05</span> diferença significativa entre as médias</td>
 </tr>
 </tfoot>
 
@@ -3471,10 +3442,10 @@ N = 380<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
 </div>
 </div>
 </div>
-<div class="box-greypeq">
+<div style="font-size: 0.78em; margin-top: 6px; line-height: 1.28;">
 <ul>
-<li><p><strong>Teste de Levene:</strong> Rejeitou a igualdade de variâncias para todas as variáveis (<span class="math inline">\(p &lt; 0{,}001\)</span>), justificando o uso da <strong>ANOVA de Welch</strong>.</p></li>
-<li><p><strong>Diferenças Significativas:</strong> Houve diferença entre as médias de <strong>IMC</strong> (<span class="math inline">\(p &lt; 0{,}001\)</span>), <strong>Peso</strong> (<span class="math inline">\(p &lt; 0{,}001\)</span>) e <strong>Idade</strong> (<span class="math inline">\(p = 0{,}001\)</span>).</p></li>
+<li>O <strong>Teste de Levene</strong> confirmou variâncias heterogêneas (<span class="math inline">\(p &lt; 0{,}001\)</span>) em todas as variáveis, justificando plenamente a <strong>ANOVA de Welch</strong> e o pós-hoc de <strong>Games-Howell</strong>.</li>
+<li>Foram observadas diferenças estatisticamente significativas para <strong>IMC</strong>, <strong>Peso</strong> e <strong>Idade</strong> (<span class="math inline">\(p \le 0{,}001\)</span>).</li>
 </ul>
 </div>
 </section>
@@ -3482,98 +3453,55 @@ N = 380<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
 <h2>Comparações Múltiplas (Games-Howell)</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="box-greypeq">
-<p><strong>Índice de Massa Corporal — IMC (kg/m²)</strong></p>
+<h3 id="índice-de-massa-corporal-imc">Índice de Massa Corporal (IMC)</h3>
 <ul>
-<li><p><strong>Aumentou:</strong> Média de <strong>26,72</strong> (faixa de sobrepeso).</p></li>
-<li><p><strong>Diminuiu:</strong> Média de <strong>25,69</strong>.</p></li>
-<li><p><strong>Não alterou:</strong> Média de <strong>25,49</strong>.</p></li>
-<li><p><strong>Não consumo:</strong> Média de <strong>24,11</strong> (faixa de eutrofia).</p></li>
+<li><p><strong>Aumentou:</strong> Média de <strong>26,7 kg/m²</strong> <span class="math inline">\(\\rightarrow\)</span> Faixa de <strong>sobrepeso</strong>.</p></li>
+<li><p><strong>Não alterou:</strong> Média de <strong>25,5 kg/m²</strong>.</p></li>
+<li><p><strong>Não consumo:</strong> Média de <strong>24,1 kg/m²</strong> <span class="math inline">\(\\rightarrow\)</span> Faixa de <strong>eutrofia</strong>.</p></li>
+<li><p><strong>Decisão Games-Howell:</strong> Quem aumentou tem IMC significativamente maior que todos os outros grupos (<span class="math inline">\(p &lt; 0{,}01\)</span>).</p></li>
 </ul>
-<p><em>Resultado:</em> Quem <strong>aumentou</strong> tem IMC significativamente maior que todos os outros grupos (<span class="math inline">\(p &lt; 0{,}01\)</span>). Quem <strong>não consome</strong> tem IMC significativamente menor que todos (<span class="math inline">\(p &lt; 0{,}001\)</span>).</p>
-</div>
 </div><div class="column" style="width:50%;">
-<div class="box-greypeq">
-<p><strong>Peso Corporal (kg)</strong></p>
+<h3 id="peso-corporal-kg">Peso Corporal (kg)</h3>
 <ul>
-<li><p><strong>Aumentou:</strong> Média de <strong>74,02 kg</strong>.</p></li>
-<li><p><strong>Diminuiu:</strong> Média de <strong>70,73 kg</strong>.</p></li>
-<li><p><strong>Não alterou:</strong> Média de <strong>70,24 kg</strong>.</p></li>
-<li><p><strong>Não consumo:</strong> Média de <strong>65,09 kg</strong>.</p></li>
+<li><p><strong>Aumentou:</strong> Média de <strong>74,0 kg</strong>.</p></li>
+<li><p><strong>Não alterou:</strong> Média de <strong>69,9 kg</strong>.</p></li>
+<li><p><strong>Não consumo:</strong> Média de <strong>65,1 kg</strong>.</p></li>
+<li><p><strong>Diferença na Balança:</strong> Quase <strong>9 kg de diferença média</strong> entre quem aumentou e quem não consumia (<span class="math inline">\(p &lt; 0{,}001\)</span>).</p></li>
+<li><p><strong>Conexão Clínica:</strong> O aumento no consumo de embutidos esteve diretamente alinhado ao ganho de peso e sobrepeso.</p></li>
 </ul>
-<p><em>Resultado:</em> Diferença de quase <strong>9 kg</strong> entre quem aumentou e quem não consome embutidos (<span class="math inline">\(p &lt; 0{,}001\)</span>).</p>
-</div>
 </div></div>
 </section>
-<section id="conclusão" class="slide level2 center">
-<h2>4. Conclusão</h2>
-<div class="box-grey">
-<p><strong>Síntese dos Achados, Implicações Práticas e Limitações</strong></p>
-</div>
+<section id="conclusão-principais-achados" class="slide level2">
+<h2>Conclusão — principais achados</h2>
+<ul>
+<li><p><strong>Panorama:</strong> entre os 2.155 adultos avaliados, <strong>23,9%</strong> aumentaram o consumo de embutidos na pandemia, 39,5% mantiveram o consumo estável, 18,9% já não consumiam e 17,6% conseguiram diminuir.</p></li>
+<li><p><strong>Categóricas:</strong> <strong>13 de 15 variáveis</strong> apresentaram associação significativa com a mudança no consumo (<span class="math inline">\(p &lt; 0{,}05\)</span>). As relações mais fortes foram <strong>Dificuldade financeira</strong> (<span class="math inline">\(V = 0{,}144\)</span>), <strong>Consulta com nutricionista</strong> (<span class="math inline">\(V = 0{,}142\)</span>) e <strong>Ansiedade</strong> (<span class="math inline">\(V = 0{,}087\)</span>), seguidas por <strong>Renda</strong> (<span class="math inline">\(V = 0{,}084\)</span>) e <strong>Gênero</strong> (<span class="math inline">\(V = 0{,}079\)</span>).</p></li>
+<li><p><strong>Sem associação:</strong> apenas duas variáveis não tiveram relação com o consumo de carnes processadas: <strong>COVID-19</strong> (<span class="math inline">\(p = 0{,}295\)</span>) e <strong>Enxaqueca</strong> (<span class="math inline">\(p = 0{,}370\)</span>).</p></li>
+<li><p><strong>Quantitativas:</strong> <strong>Idade, Peso e IMC</strong> diferem significativamente entre as categorias de consumo (<span class="math inline">\(p \le 0{,}001\)</span>). Participantes que aumentaram o consumo apresentaram maior peso médio (<strong>74,0 kg</strong> vs.&nbsp;65,1 kg) e entraram na faixa clínica de sobrepeso (<strong>IMC = 26,7 kg/m²</strong>).</p></li>
+</ul>
 </section>
-<section id="síntese-dos-achados" class="slide level2">
-<h2>Síntese dos Achados</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="box-greypeq">
-<p><strong>Fatores Protetivos</strong></p>
+<section id="conclusão-interpretação-e-limitações" class="slide level2">
+<h2>Conclusão — interpretação e limitações</h2>
 <ul>
-<li><p><strong>Acompanhamento com Nutricionista:</strong> Forte associação com a diminuição ou com a não ingestão de embutidos.</p></li>
-<li><p><strong>Estabilidade Financeira:</strong> Preserva a rotina alimentar prévia sem migração para alimentos processados.</p></li>
-<li><p><strong>Gênero Feminino:</strong> Maior prevalência de indivíduos que não consomem embutidos.</p></li>
-</ul>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="box-greypeq">
-<p><strong>Fatores de Risco</strong></p>
+<li><strong>Condições socioeconômicas:</strong>
 <ul>
-<li><p><strong>Impacto Econômico:</strong> Famílias com dificuldade financeira aumentaram o consumo de ultraprocessados estocáveis.</p></li>
-<li><p><strong>Transtornos Emocionais:</strong> Ansiedade e insônia associaram-se ao aumento na ingestão de embutidos.</p></li>
-<li><p><strong>Sobrepeso:</strong> Indivíduos com maior IMC e peso corporal foram os que mais aumentaram o consumo.</p></li>
-</ul>
-</div>
-</div></div>
-</section>
-<section id="implicações-e-considerações-finais" class="slide level2">
-<h2>Implicações e Considerações Finais</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="box-greypeq">
-<p><strong>Implicações Práticas</strong></p>
+<li><em>“Aumentou”</em> acima do esperado em quem enfrentou <strong>Dificuldade financeira</strong> (+4,0) e menor renda; abaixo em quem teve estabilidade de renda.</li>
+<li>Forte polarização: o aperto financeiro tanto forçou a troca por ultraprocessados baratos (+4,0) quanto o corte orçamentário drástico (+4,0).</li>
+</ul></li>
+<li><strong>Fatores protetivos:</strong>
 <ul>
-<li><p>Reforça a importância de políticas públicas voltadas à segurança alimentar e ao acesso a alimentos frescos em crises.</p></li>
-<li><p>Destaca a necessidade de intervenções integradas entre nutrição e saúde mental no pós-pandemia.</p></li>
-</ul>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="box-greypeq">
-<p><strong>Limitações do Estudo</strong></p>
+<li><strong>Consulta com nutricionista:</strong> maior escudo protetor — forte excesso em <em>Não consumo</em> (+4,9) e <em>Diminuiu</em> (+2,9), com queda drástica no aumento (-4,2).</li>
+<li><strong>Gênero:</strong> mulheres mantiveram maior distância de embutidos (+5,0 em <em>Não consumo</em>).</li>
+</ul></li>
+<li><strong>Saúde mental (comer emocional):</strong>
 <ul>
-<li><p><strong>Delineamento Transversal:</strong> Não permite estabelecer relação causal estrita.</p></li>
-<li><p><strong>Amostragem Online:</strong> Maior proporção de mulheres e indivíduos com alta escolaridade em relação à população geral.</p></li>
+<li>Relato de <strong>Ansiedade</strong> (+3,3) e <strong>Insônia</strong> (+3,3) associou-se diretamente ao aumento no consumo de embutidos como válvula de escape no isolamento.</li>
+</ul></li>
+<li><strong>Limitações:</strong> delineamento transversal (associação, não causa), questionário online autorreferido e amostra de conveniência com maior participação feminina e de maior escolaridade.</li>
 </ul>
-</div>
-</div></div>
-</section>
-<section id="referências" class="slide level2">
-<h2>Referências</h2>
-<div class="box-greypeq">
-<ul>
-<li><p><strong>Agresti, A.</strong> (2013). <em>Categorical Data Analysis</em>. 3rd Edition. John Wiley &amp; Sons.</p></li>
-<li><p><strong>Brasil. Ministério da Saúde.</strong> (2014). <em>Guia Alimentar para a População Brasileira</em>. 2ª edição.</p></li>
-<li><p><strong>Games, P. A., &amp; Howell, J. F.</strong> (1976). <em>Pairwise Multiple Comparison Procedures with Unequal N’s and/or Variances</em>. Journal of Educational Statistics.</p></li>
-<li><p><strong>Welch, B. L.</strong> (1951). <em>On the comparison of several mean values: an alternative approach</em>. Biometrika.</p></li>
-<li><p><strong>Universidade Federal Fluminense (UFF).</strong> <em>Material Didático de Prática Estatística II</em>.</p></li>
-</ul>
-</div>
 </section>
 <section id="obrigado" class="slide level2 center">
 <h2>Obrigado!</h2>
-<div class="box-grey">
-<p><strong>Dúvidas e Discussão</strong><br>
-Marcos Paulo Costa da Silva Dias<br>
-Universidade Federal Fluminense — UFF</p>
-</div>
 
 </section>
     </div>
@@ -3604,7 +3532,7 @@ Universidade Federal Fluminense — UFF</p>
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': true,
+'controlsAuto': false,
 'previewLinksAuto': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
@@ -3615,7 +3543,7 @@ Universidade Federal Fluminense — UFF</p>
 'smaller': true,
  
         // Display controls in the bottom right corner
-        controls: false,
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
@@ -3762,7 +3690,7 @@ Universidade Federal Fluminense — UFF</p>
         height: 720,
 
         // Factor of the display size that should remain empty around the content
-        margin: 7.0e-2,
+        margin: 5.0e-2,
 
         math: {
           mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',

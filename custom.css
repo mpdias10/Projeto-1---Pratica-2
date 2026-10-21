@@ -1,6 +1,7 @@
 /* ==========================================================================
    PALETA E ESPAÇAMENTO OFICIAL - SEAGREEN & WHITESMOKE
    Organização visual espaçada, arejada e sem elementos amontoados
+   SEM NENHUMA BARRA DE ROLAGEM DENTRO DAS CÉLULAS
    ========================================================================== */
 
 .reveal {
@@ -18,42 +19,42 @@
    ========================================================================== */
 .reveal #title-slide {
   text-align: center;
-  padding-top: 40px;
+  padding-top: 35px;
 }
 
 .reveal #title-slide .title {
   color: seagreen !important;
   font-weight: 800 !important;
-  font-size: 2.2em !important;
+  font-size: 2.1em !important;
   letter-spacing: 2px !important;
-  margin-bottom: 18px !important;
+  margin-bottom: 16px !important;
   text-transform: uppercase !important;
 }
 
 .reveal #title-slide .subtitle {
   color: black !important;
   font-weight: 700 !important;
-  font-size: 1.15em !important;
+  font-size: 1.1em !important;
   letter-spacing: 1px !important;
-  margin-bottom: 28px !important;
+  margin-bottom: 24px !important;
   text-transform: uppercase !important;
 }
 
 .reveal #title-slide .author {
   color: black !important;
-  font-size: 0.95em !important;
-  margin-bottom: 6px !important;
+  font-size: 0.92em !important;
+  margin-bottom: 5px !important;
 }
 
 .reveal #title-slide .institute {
   color: black !important;
-  font-size: 0.85em !important;
-  margin-bottom: 18px !important;
+  font-size: 0.82em !important;
+  margin-bottom: 16px !important;
 }
 
 .reveal #title-slide .date {
   color: black !important;
-  font-size: 0.85em !important;
+  font-size: 0.82em !important;
 }
 
 /* ==========================================================================
@@ -61,12 +62,12 @@
    ========================================================================== */
 .reveal h2 {
   color: black !important;
-  font-size: 1.25em !important;
+  font-size: 1.15em !important;
   font-weight: 700 !important;
   margin-top: 0 !important;
-  margin-bottom: 18px !important;
-  padding-bottom: 8px !important;
-  border-bottom: 3px solid seagreen !important;
+  margin-bottom: 8px !important;
+  padding-bottom: 3px !important;
+  border-bottom: 2.5px solid seagreen !important;
 }
 
 .reveal h2.center {
@@ -80,15 +81,15 @@
 
 .reveal h3 {
   color: black !important;
-  font-size: 1.05em !important;
+  font-size: 1.0em !important;
   font-weight: 700 !important;
   margin-top: 0 !important;
-  margin-bottom: 8px !important;
+  margin-bottom: 6px !important;
 }
 
 .reveal p {
-  margin: 6px 0 !important;
-  line-height: 1.4 !important;
+  margin: 3px 0 !important;
+  line-height: 1.35 !important;
   color: black !important;
 }
 
@@ -98,38 +99,39 @@
 .box-grey {
   background-color: whitesmoke !important;
   border-left: 6px solid seagreen !important;
-  padding: 14px 20px !important;
-  border-radius: 8px !important;
-  margin: 12px 0 !important;
-  color: black !important;
-}
-
-.box-greypeq {
-  font-size: 0.86em !important;
-  background-color: whitesmoke !important;
-  border-left: 6px solid seagreen !important;
-  padding: 12px 18px !important;
+  padding: 10px 16px !important;
   border-radius: 8px !important;
   margin: 8px 0 !important;
   color: black !important;
 }
 
+.box-greypeq {
+  font-size: 0.78em !important;
+  background-color: whitesmoke !important;
+  border-left: 5px solid seagreen !important;
+  padding: 6px 12px !important;
+  border-radius: 6px !important;
+  margin: 5px 0 !important;
+  line-height: 1.25 !important;
+  color: black !important;
+}
+
 /* Espaçamento das Colunas */
 .reveal .columns {
-  margin-top: 10px !important;
+  margin-top: 6px !important;
   align-items: stretch !important;
 }
 
 /* Listas com espaçamento confortável */
 .reveal ul {
-  margin-top: 6px !important;
-  margin-bottom: 8px !important;
-  padding-left: 20px !important;
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+  padding-left: 18px !important;
 }
 
 .reveal li {
   margin-bottom: 6px !important;
-  line-height: 1.35 !important;
+  line-height: 1.3 !important;
   color: black !important;
 }
 
@@ -137,7 +139,7 @@
    ABAS (PANEL-TABSET)
    ========================================================================== */
 .panel-tabset .nav-tabs {
-  margin-bottom: 12px !important;
+  margin-bottom: 4px !important;
   border-bottom: 1px solid silver !important;
 }
 
@@ -145,12 +147,12 @@
 .panel-tabset .nav-link,
 .panel-tabset a {
   color: black !important;
-  font-size: 0.9em !important;
+  font-size: 0.78em !important;
   background-color: transparent !important;
   border: 1px solid silver !important;
   border-radius: 4px !important;
-  padding: 5px 12px !important;
-  margin-right: 6px !important;
+  padding: 2px 8px !important;
+  margin-right: 4px !important;
 }
 
 .panel-tabset .nav-tabs .nav-link:hover,
@@ -170,25 +172,47 @@
 }
 
 /* ==========================================================================
-   TABELAS COMPACTAS E LEGÍVEIS
+   TABELAS COMPACTAS (GT / GTSUMMARY) - SEM BARRAS DE ROLAGEM DENTRO DAS CÉLULAS
    ========================================================================== */
-.reveal table {
+.reveal table,
+.reveal table *,
+.reveal .gt_table,
+.reveal .gt_table * {
+  overflow: visible !important; /* MATA TODAS AS BARRAS DE ROLAGEM INTERNAS */
+}
+
+.reveal table,
+.reveal .gt_table {
   width: 100% !important;
   color: black !important;
-  font-size: 0.68em !important;
-  margin-top: 6px !important;
-  margin-bottom: 6px !important;
+  font-size: 0.52em !important;
+  margin-top: 0 !important;
+  margin-bottom: 1px !important;
+  border-collapse: collapse !important;
+  line-height: 1.1 !important;
 }
 
-.reveal table th {
-  border-bottom: 2px solid seagreen !important;
-  padding: 5px 8px !important;
+.reveal table th,
+.reveal .gt_col_heading {
+  border-bottom: 1.5px solid seagreen !important;
+  padding: 1.5px 5px !important;
   font-weight: 700 !important;
   color: black !important;
+  line-height: 1.1 !important;
 }
 
-.reveal table td {
-  padding: 4px 8px !important;
-  border-bottom: 1px solid silver !important;
+.reveal table td,
+.reveal .gt_row {
+  padding: 1px 5px !important;
+  border-bottom: 1px solid #e0e0e0 !important;
   color: black !important;
+  line-height: 1.1 !important;
+}
+
+/* Remove a barra de rolagem horizontal inferior */
+.reveal .slides,
+.reveal .slides section,
+.reveal .panel-tabset,
+.reveal .gt_table_container {
+  overflow-x: hidden !important;
 }
